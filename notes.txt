@@ -1,0 +1,19 @@
+#COLOR PALLETE
+
+Primary (Accent Purple): #7C3AED – Vibrant purple for headings/buttons
+Secondary (Dark Gray): #1F1F1F – For body text or alternate backgrounds
+Background: #F9FAFB – Light, almost white
+Text Black: #111827 – Clean, modern
+Highlight: rgb(102, 102, 102) – Soft bluish-gray for hover/secondary elements
+
+#FONTS 
+Headings: Poppins
+Body Text: Inter
+
+
+#BREAKPOINTS:
+
+min-width: 640px
+min-width: 768px
+min-width: 1024px
+min-width: 1440px

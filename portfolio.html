@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mobile_menu.css" />
+    <title>My Works - MaxDev Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-inner">
+          <div class="logo">
+            <a href="index.html">MaxDev</a>
+          </div>
+
+          <nav class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </nav>
+
+          <div class="nav-bar">
+            <ul>
+              <li>
+                <a href="index.html#about">Despre mine</a>
+              </li>
+              <li>
+                <a href="portfolio.html" class="active">Portfolio</a>
+              </li>
+              <li>
+                <a href="servicii.html">Servicii</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact-me">
+            <a href="contact.html" class="contact-btn">
+              <span class="contact-text">Contact us</span>
+              <span class="contact-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+      <div class="mobile-menu-content">
+        <nav class="mobile-nav">
+          <ul class="mobile-nav-links">
+            <li><a href="index.html">Index</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="servicii.html">Servicii</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Get Started</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Portfolio Hero Section -->
+    <section class="portfolio-hero">
+      <div class="portfolio-hero-bg">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+      </div>
+
+      <div class="container">
+        <div class="portfolio-hero-inner">
+          <div class="portfolio-hero-content">
+            <div class="portfolio-badge">
+              <span>My Works</span>
+            </div>
+            <h1 class="portfolio-hero-title">
+              Crafted with 
+              <span class="portfolio-hero-title--accent">Passion & Purpose</span>
+            </h1>
+            <p class="portfolio-hero-description">
+              Explore a collection of websites and digital experiences I've created for clients worldwide. Each project tells a unique story of innovation, creativity, and results-driven design.
+            </p>
+          </div>
+          
+          <div class="portfolio-hero-visual">
+            <div class="portfolio-hero-illustration">
+              <img
+                src="images/undraw_building-a-website_1wrp.svg"
+                alt="Building a website illustration"
+                class="portfolio-hero-vector"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Showcase Section -->
+    <section class="projects-showcase">
+      <div class="container">
+        <div class="projects-showcase-inner">
+          <!-- Project Card 1 -->
+          <article class="project-card">
+            <div class="project-number">01</div>
+            
+            <div class="project-title-wrapper">
+              <h2 class="project-title">
+                URBAN <span class="project-accent">HAVEN</span> APARTMENTS
+              </h2>
+              <span class="project-year">2025</span>
+            </div>
+            
+            <!-- Two-Column Project Layout -->
+            <div class="project-two-column">
+              <!-- Left Column: MacBook Mockup -->
+              <div class="project-main-image">
+                <img src="images/laptopmockupnobk.png" alt="Urban Haven Apartments - Laptop Mockup" class="main-image">
+              </div>
+              
+              <!-- Right Column: Project Details Panel -->
+              <div class="project-details-panel">
+                <!-- Project Meta Info -->
+                <div class="project-meta">
+                  <span class="project-type">Corporate Website</span>
+                  <span class="meta-separator">•</span>
+                  <span class="project-timeline">3 weeks</span>
+                  <span class="meta-separator">•</span>
+                  <span class="project-year">2025</span>
+                </div>
+                
+                <!-- Project Description -->
+                <div class="project-description">
+                  <p>The client needed a fast, modern site to promote their team-building services. My role was design + development, focusing on performance and user experience.</p>
+                </div>
+                
+                <!-- Tech Stack -->
+                <div class="project-tech">
+                  <span class="tech-item">React</span>
+                  <span class="tech-item">Tailwind CSS</span>
+                  <span class="tech-item">Node.js</span>
+                </div>
+                
+                <!-- Project Result -->
+                <div class="project-result">
+                  <strong>+40% inquiries after launch</strong>
+                </div>
+                
+                <!-- View Project Button -->
+                <div class="project-cta">
+                  <button class="view-project-btn">
+                    <span class="btn-text">View Project</span>
+                    <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="project-thumbnails">
+              <div class="thumbnail-item">
+                <img src="images/projecteamup.png" alt="Urban Haven - Interior View" class="thumbnail-image">
+              </div>
+              <div class="thumbnail-item">
+                <img src="images/projecteamup.png" alt="Urban Haven - Exterior Detail" class="thumbnail-image">
+              </div>
+              <div class="thumbnail-item">
+                <img src="images/projecteamup.png" alt="Urban Haven - Night View" class="thumbnail-image">
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 2 (Example) -->
+          <article class="project-card">
+            <div class="project-number">02</div>
+            
+            <div class="project-title-wrapper">
+              <h2 class="project-title">
+                DIGITAL <span class="project-accent">COMMERCE</span> PLATFORM
+              </h2>
+              <span class="project-year">2024</span>
+            </div>
+            
+            <!-- Two-Column Project Layout -->
+            <div class="project-two-column">
+              <!-- Left Column: MacBook Mockup -->
+              <div class="project-main-image">
+                <img src="images/laptopmockupnobk.png" alt="Digital Commerce Platform - Laptop Mockup" class="main-image">
+              </div>
+              
+              <!-- Right Column: Project Details Panel -->
+              <div class="project-details-panel">
+                <!-- Project Meta Info -->
+                <div class="project-meta">
+                  <span class="project-type">E-commerce Platform</span>
+                  <span class="meta-separator">•</span>
+                  <span class="project-timeline">6 weeks</span>
+                  <span class="meta-separator">•</span>
+                  <span class="project-year">2024</span>
+                </div>
+                
+                <!-- Project Description -->
+                <div class="project-description">
+                  <p>Built a comprehensive e-commerce platform with advanced filtering, payment integration, and admin dashboard for seamless online shopping experience.</p>
+                </div>
+                
+                <!-- Tech Stack -->
+                <div class="project-tech">
+                  <span class="tech-item">Next.js</span>
+                  <span class="tech-item">TypeScript</span>
+                  <span class="tech-item">Stripe</span>
+                  <span class="tech-item">MongoDB</span>
+                </div>
+                
+                <!-- Project Result -->
+                <div class="project-result">
+                  <strong>300% increase in online sales</strong>
+                </div>
+                
+                <!-- View Project Button -->
+                <div class="project-cta">
+                  <button class="view-project-btn">
+                    <span class="btn-text">View Project</span>
+                    <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="project-thumbnails">
+              <div class="thumbnail-item">
+                <img src="images/projecteamup.png" alt="Commerce Platform - Dashboard" class="thumbnail-image">
+              </div>
+              <div class="thumbnail-item">
+                <img src="images/projecteamup.png" alt="Commerce Platform - Mobile View" class="thumbnail-image">
+              </div>
+              <div class="thumbnail-item">
+                <img src="images/projecteamup.png" alt="Commerce Platform - Checkout" class="thumbnail-image">
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 3 (Example) -->
+          <article class="project-card">
+            <div class="project-number">03</div>
+            
+            <div class="project-title-wrapper">
+              <h2 class="project-title">
+                CREATIVE <span class="project-accent">STUDIO</span> WEBSITE
+              </h2>
+              <span class="project-year">2024</span>
+            </div>
+            
+            <!-- Two-Column Project Layout -->
+            <div class="project-two-column">
+              <!-- Left Column: MacBook Mockup -->
+              <div class="project-main-image">
+                <img src="images/laptopmockupnobk.png" alt="Creative Studio Website - Laptop Mockup" class="main-image">
+              </div>
+              
+              <!-- Right Column: Project Details Panel -->
+              <div class="project-details-panel">
+                <!-- Project Meta Info -->
+                <div class="project-meta">
+                  <span class="project-type">Creative Portfolio</span>
+                  <span class="meta-separator">•</span>
+                  <span class="project-timeline">4 weeks</span>
+                  <span class="meta-separator">•</span>
+                  <span class="project-year">2024</span>
+                </div>
+                
+                <!-- Project Description -->
+                <div class="project-description">
+                  <p>Designed and developed a stunning portfolio website for a creative agency, featuring smooth animations and interactive galleries to showcase their work.</p>
+                </div>
+                
+                <!-- Tech Stack -->
+                <div class="project-tech">
+                  <span class="tech-item">Vue.js</span>
+                  <span class="tech-item">GSAP</span>
+                  <span class="tech-item">Sass</span>
+                  <span class="tech-item">Netlify</span>
+                </div>
+                
+                <!-- Project Result -->
+                <div class="project-result">
+                  <strong>50+ new client inquiries</strong>
+                </div>
+                
+                <!-- View Project Button -->
+                <div class="project-cta">
+                  <button class="view-project-btn">
+                    <span class="btn-text">View Project</span>
+                    <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="project-thumbnails">
+              <div class="thumbnail-item">
+                <img src="images/projecteamup.png" alt="Studio Website - Portfolio" class="thumbnail-image">
+              </div>
+              <div class="thumbnail-item">
+                <img src="images/projecteamup.png" alt="Studio Website - About" class="thumbnail-image">
+              </div>
+              <div class="thumbnail-item">
+                <img src="images/projecteamup.png" alt="Studio Website - Contact" class="thumbnail-image">
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="testimonials-inner">
+          <!-- Section Header -->
+          <div class="testimonials-header">
+            <div class="testimonials-badge">
+              <span>What Clients Say</span>
+            </div>
+            <h2 class="testimonials-title">
+              Trusted by <span class="title-highlight">Amazing</span> Clients
+            </h2>
+          </div>
+
+          <!-- Testimonials Grid -->
+          <div class="testimonials-grid">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+              <div class="testimonial-quote">
+                <svg class="quote-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="currentColor"/>
+                </svg>
+                <p>"Working with MaxDev was an absolute game-changer for our business. The website exceeded our expectations and has significantly improved our online presence."</p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <img src="images/avatar-sarah.jpg" alt="Sarah Johnson" class="avatar-image">
+                </div>
+                <div class="author-info">
+                  <h4 class="author-name">Sarah Johnson</h4>
+                  <p class="author-role">CEO, TechStart Solutions</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+              <div class="testimonial-quote">
+                <svg class="quote-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="currentColor"/>
+                </svg>
+                <p>"Professional, creative, and delivered on time. MaxDev transformed our outdated website into a modern, user-friendly platform that our customers love."</p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <img src="images/avatar-michael.jpg" alt="Michael Chen" class="avatar-image">
+                </div>
+                <div class="author-info">
+                  <h4 class="author-name">Michael Chen</h4>
+                  <p class="author-role">Founder, Creative Studios</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+              <div class="testimonial-quote">
+                <svg class="quote-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="currentColor"/>
+                </svg>
+                <p>"Incredible attention to detail and excellent communication throughout the project. The results speak for themselves - our conversions increased by 40%."</p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <img src="images/avatar-emma.jpg" alt="Emma Rodriguez" class="avatar-image">
+                </div>
+                <div class="author-info">
+                  <h4 class="author-name">Emma Rodriguez</h4>
+                  <p class="author-role">Marketing Director, RetailPro</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="contact-cta">
+      <div class="container">
+        <div class="contact-cta-inner">
+          <div class="contact-cta-content">
+            <h2 class="contact-cta-title">
+              Let's Work <span class="title-highlight">Together</span>
+            </h2>
+            <p class="contact-cta-description">
+              I'm always open to new projects and collaborations. Let's build something great that makes a real impact.
+            </p>
+            <div class="contact-cta-button">
+              <a href="index.html#contact" class="cta-btn cta-btn--primary">
+                <span class="btn-text">Let's Talk</span>
+                <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+            <div class="contact-cta-info">
+              <p class="contact-info-text">
+                <span class="contact-highlight">Quick response guaranteed</span> • Free consultation available
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Lightbox Modal -->
+    <div class="lightbox-overlay" id="lightboxOverlay">
+      <div class="lightbox-container">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="lightbox-content">
+          <div class="lightbox-loading" id="lightboxLoading">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Loading...</p>
+          </div>
+          <img src="" alt="" class="lightbox-image" id="lightboxImage">
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-bg">
+        <!-- Wavy Background Elements -->
+        <div class="footer-waves">
+          <div class="wave wave-1"></div>
+          <div class="wave wave-2"></div>
+          <div class="wave wave-3"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="footer-inner">
+          <!-- Footer Content -->
+          <div class="footer-content">
+            <!-- Logo and Description -->
+            <div class="footer-brand">
+              <div class="footer-logo">
+                <a href="index.html">MaxDev</a>
+              </div>
+              <p class="footer-description">
+                Creating exceptional websites that drive results and help
+                businesses grow online.
+              </p>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="footer-nav">
+              <div class="footer-nav-section">
+                <h4 class="footer-nav-title">Navigation</h4>
+                <ul class="footer-nav-list">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="index.html#about">Despre mine</a></li>
+                  <li><a href="portfolio.html">Portfolio</a></li>
+                  <li><a href="index.html#services">Servicii</a></li>
+                </ul>
+              </div>
+
+              <div class="footer-nav-section">
+                <h4 class="footer-nav-title">Services</h4>
+                <ul class="footer-nav-list">
+                  <li><a href="index.html#services">Web Development</a></li>
+                  <li><a href="index.html#services">UI/UX Design</a></li>
+                  <li><a href="index.html#services">SEO Optimization</a></li>
+                  <li><a href="index.html#services">Maintenance</a></li>
+                </ul>
+              </div>
+
+              <div class="footer-nav-section">
+                <h4 class="footer-nav-title">Contact</h4>
+                <ul class="footer-nav-list">
+                  <li>
+                    <a href="mailto:hello@maxdev.com">hello@maxdev.com</a>
+                  </li>
+                  <li><a href="index.html#contact">Get Started</a></li>
+                  <li><a href="index.html#contact">Free Consultation</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="footer-social">
+              <h4 class="footer-social-title">Follow Me</h4>
+              <div class="footer-social-links">
+                <a href="#" class="social-link" aria-label="Twitter">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                    />
+                  </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                    />
+                  </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Instagram">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer Bottom -->
+          <div class="footer-bottom">
+            <div class="footer-copyright">
+              <p>&copy; 2024 MaxDev. All rights reserved.</p>
+            </div>
+            <div class="footer-legal">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
