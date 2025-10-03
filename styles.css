@@ -803,6 +803,229 @@ a {
 
 /* END HEADER */
 
+/* START SOCIAL PROOF SECTION */
+.social-proof {
+  position: relative;
+  background: var(--background-color);
+  padding: 80px 0 100px;
+  overflow: hidden;
+}
+
+.social-proof-inner {
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+/* Social Proof Title */
+.social-proof-title {
+  font-family: var(--headings-text);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--blacktext-color);
+  margin: 0 0 60px 0;
+  line-height: 1.2;
+  opacity: 0;
+  animation: fade-slide-up 0.8s ease-out 0.2s forwards;
+}
+
+/* Logo Carousel Container */
+.logo-carousel {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  overflow: hidden;
+  margin: 0 0 50px 0;
+  
+  /* Subtle fade edges for professional look */
+  mask: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+  -webkit-mask: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+}
+
+/* Logo Track - The moving container */
+.logo-track {
+  display: flex;
+  align-items: center;
+  animation: scroll-logos 25s linear infinite;
+  width: calc(200%); /* Double width to accommodate duplicated logos */
+}
+
+/* Individual Logo Items */
+.logo-item {
+  flex: 0 0 auto;
+  margin: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: fade-slide-up 0.8s ease-out forwards;
+  animation-delay: calc(0.4s + var(--logo-delay, 0s));
+}
+
+/* Client Logo Styling */
+.client-logo {
+  height: 50px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+  
+  /* Subtle, professional styling */
+  filter: grayscale(100%) brightness(0.7) contrast(0.8);
+  opacity: 0.6;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Subtle hover effect for logos */
+.logo-item:hover .client-logo {
+  filter: grayscale(0%) brightness(1) contrast(1);
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+/* Social Proof Subtext */
+.social-proof-subtext {
+  font-family: var(--body-text);
+  font-size: 0.9rem;
+  color: rgba(102, 102, 102, 0.7);
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.3px;
+  opacity: 0;
+  animation: fade-slide-up 0.8s ease-out 0.6s forwards;
+}
+
+/* Keyframe Animation for Infinite Scroll */
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move exactly half way (one set of logos) */
+  }
+}
+
+/* Individual logo staggered animation delays */
+.logo-item:nth-child(1) { --logo-delay: 0.1s; }
+.logo-item:nth-child(2) { --logo-delay: 0.15s; }
+.logo-item:nth-child(3) { --logo-delay: 0.2s; }
+.logo-item:nth-child(4) { --logo-delay: 0.25s; }
+.logo-item:nth-child(5) { --logo-delay: 0.3s; }
+.logo-item:nth-child(6) { --logo-delay: 0.35s; }
+
+/* Subtle background enhancement */
+.social-proof::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 20% 50%, 
+    rgba(124, 58, 237, 0.02) 0%, 
+    transparent 50%
+  );
+  pointer-events: none;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .social-proof {
+    padding: 60px 0 80px;
+  }
+  
+  .social-proof-title {
+    margin-bottom: 40px;
+    font-size: clamp(1.3rem, 6vw, 1.8rem);
+  }
+  
+  .logo-carousel {
+    height: 60px;
+    margin-bottom: 40px;
+  }
+  
+  .logo-item {
+    margin: 0 25px;
+  }
+  
+  .client-logo {
+    height: 40px;
+    max-width: 100px;
+  }
+  
+  .social-proof-subtext {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .social-proof {
+    padding: 100px 0 120px;
+  }
+  
+  .social-proof-title {
+    margin-bottom: 80px;
+  }
+  
+  .logo-carousel {
+    margin-bottom: 60px;
+  }
+  
+  .logo-item {
+    margin: 0 50px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .social-proof {
+    padding: 120px 0 140px;
+  }
+  
+  .social-proof-title {
+    margin-bottom: 100px;
+  }
+  
+  .logo-item {
+    margin: 0 60px;
+  }
+  
+  .client-logo {
+    height: 60px;
+  }
+}
+
+/* Accessibility and Performance */
+@media (prefers-reduced-motion: reduce) {
+  .logo-track {
+    animation: none;
+  }
+  
+  .social-proof-title,
+  .logo-item,
+  .social-proof-subtext {
+    animation: none;
+    opacity: 1;
+  }
+  
+  .logo-item:hover .client-logo {
+    transform: none;
+  }
+}
+
+/* Common fade-slide-up animation for consistency */
+@keyframes fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* END SOCIAL PROOF SECTION */
+
 
 /* START PORTFOLIO PAGE STYLES */
 
