@@ -8504,7 +8504,7 @@ a {
 .business-benefits .card-title {
   font-family: var(--headings-text);
   font-weight: 700;
-  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.5rem, 3vw, 1.8rem);
   color: var(--blacktext-color);
   margin: 0 0 12px 0;
   line-height: 1.3;
@@ -8523,11 +8523,33 @@ a {
 /* Business Benefits card description (dark text on white cards) */
 .business-benefits .card-description {
   font-family: var(--body-text);
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   color: var(--highlight-color);
   line-height: 1.4;
   margin: 0 0 20px 0;
   flex: 1;
+}
+
+/* Desktop responsive styles for business-benefits cards on larger screens */
+@media (min-width: 640px) {
+  .business-benefits .card-title {
+    font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+  }
+  
+  .business-benefits .card-description {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile responsive styles for business-benefits cards on small screens */
+@media (max-width: 400px) {
+  .business-benefits .card-title {
+    font-size: clamp(1.7rem, 4vw, 2rem);
+  }
+  
+  .business-benefits .card-description {
+    font-size: 1.25rem;
+  }
 }
 
 /* Why Choose Me card description (dark text on white cards) */
@@ -8797,12 +8819,12 @@ a {
   }
   
   .business-benefits .card-title {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
   }
   
   .business-benefits .card-description {
-    font-size: 0.85rem;
+    font-size: 1rem;
     line-height: 1.4;
     margin-bottom: 16px;
   }
@@ -8863,7 +8885,7 @@ a {
   }
   
   .benefit-card {
-    height: 360px;
+    height: 420px;
     min-height: auto;
   }
 }
@@ -8882,7 +8904,7 @@ a {
   }
   
   .benefit-card {
-    height: 380px;
+    height: 420px;
     min-height: auto;
     padding: 32px 28px 28px;
   }
