@@ -2970,14 +2970,14 @@ a {
   color: var(--highlight-color);
   font-weight: 400;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0;
   opacity: 0;
   animation: fade-slide-up 0.8s ease-out 0.6s forwards;
 }
 
 /* Services Hero Content */
 .services-hero-content {
-  text-align: center;
+  text-align: left;
   order: 1;
 }
 
@@ -3376,6 +3376,16 @@ a {
 }
 
 /* Responsive Design */
+@media (min-width: 481px) {
+  .services-hero-content {
+    text-align: left;
+  }
+  
+  .services-hero-description {
+    margin: 0;
+  }
+}
+
 @media (min-width: 640px) {
   .services-hero {
     padding: 140px 0 100px;
@@ -3427,8 +3437,12 @@ a {
 
 @media (min-width: 1024px) {
   .services-hero-inner {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
+  }
+  
+  .service-inner {
+    max-width: 1300px;
   }
   
   .services-hero-illustration {
@@ -3459,6 +3473,14 @@ a {
 }
 
 @media (min-width: 1440px) {
+  .services-hero-inner {
+    max-width: 1400px;
+  }
+  
+  .service-inner {
+    max-width: 1400px;
+  }
+  
   .pricing-grid {
     max-width: 1200px;
   }
@@ -3477,6 +3499,14 @@ a {
   .services-hero {
     padding: 100px 0 60px;
     min-height: 60vh;
+  }
+  
+  .services-hero-content {
+    text-align: center;
+  }
+  
+  .services-hero-description {
+    margin: 0 auto;
   }
   
   .services-badge {
@@ -3593,7 +3623,6 @@ a {
 }
 
 .service-inner {
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -3910,17 +3939,19 @@ a {
   }
   
   .overview-content {
-    grid-template-columns: 1fr 200px;
+    grid-template-columns: 1fr 1fr;
     gap: 50px;
+    align-items: center;
   }
   
   .service-visual {
-    justify-content: flex-end;
+    justify-content: center;
     order: 2;
   }
   
   .service-illustration {
-    max-width: 180px;
+    max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -3935,12 +3966,14 @@ a {
   }
   
   .overview-content {
-    grid-template-columns: 1fr 250px;
+    grid-template-columns: 1fr 1fr;
     gap: 60px;
+    align-items: center;
   }
   
   .service-illustration {
-    max-width: 220px;
+    max-width: 100%;
+    width: 100%;
   }
   
   .characteristic-item {
@@ -3959,12 +3992,14 @@ a {
   }
   
   .overview-content {
-    grid-template-columns: 1fr 300px;
+    grid-template-columns: 1fr 1fr;
     gap: 80px;
+    align-items: center;
   }
   
   .service-illustration {
-    max-width: 280px;
+    max-width: 100%;
+    width: 100%;
   }
 }
 
