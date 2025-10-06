@@ -2787,6 +2787,36 @@ a {
   }
 }
 
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Tablet adjustments for service pricing */
+  .service-title-wrapper {
+    margin-bottom: 50px;
+    gap: 18px;
+  }
+  
+  .service-title {
+    font-size: clamp(2.2rem, 7vw, 3.5rem);
+  }
+  
+  .pricing-text {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    padding: 6px 16px;
+  }
+}
+
+@media (min-width: 769px) {
+  /* Desktop and up - keep horizontal layout */
+  .service-title-wrapper {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 24px;
+  }
+  
+  .pricing-text {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+  }
+}
+
 @media (min-width: 769px) and (max-width: 1023px) {
   .contact-cta {
     padding: 90px 0;
@@ -3448,6 +3478,12 @@ a {
   .services-hero-illustration {
     max-height: 500px;
   }
+  
+  /* Reduce spacing between title and layout on desktop */
+  .service-title-wrapper {
+    margin-bottom: 30px;
+  }
+  
   .pricing-section {
     padding: 100px 0 140px;
   }
@@ -3528,6 +3564,29 @@ a {
   
   .services-hero-illustration {
     max-height: 250px;
+  }
+  
+  /* Service pricing mobile adjustments */
+  .service-title-wrapper {
+    margin-bottom: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .service-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  
+  .pricing-text {
+    font-size: clamp(1rem, 4vw, 1.1rem);
+    padding: 6px 16px;
+    letter-spacing: 0.2px;
+  }
+  
+  /* Make service illustrations bigger on mobile */
+  .service-illustration {
+    max-width: 300px;
   }
   
   .pricing-section {
@@ -3643,6 +3702,15 @@ a {
   opacity: 0.8;
 }
 
+/* Service Title Wrapper */
+.service-title-wrapper {
+  margin: 0 0 60px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
 /* Service Title */
 .service-title {
   font-family: var(--headings-text);
@@ -3650,8 +3718,30 @@ a {
   font-weight: 800;
   color: var(--blacktext-color);
   line-height: 1.1;
-  margin: 0 0 60px 0;
+  margin: 0;
   text-transform: none;
+  flex-shrink: 0;
+}
+
+/* Service Pricing */
+.service-pricing {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.pricing-text {
+  font-family: var(--body-text);
+  font-size: clamp(1.1rem, 2.5vw, 1.1rem);
+  font-weight: 500;
+  color: var(--primary-color);
+  background: rgba(124, 58, 237, 0.08);
+  padding: 6px 16px;
+  border-radius: 50px;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  display: inline-block;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
 }
 
 /* Service Layout */
@@ -3981,7 +4071,7 @@ a {
   }
   
   .service-title {
-    margin-bottom: 80px;
+    margin-bottom: 50px;
   }
 }
 
@@ -4028,7 +4118,7 @@ a {
   }
   
   .service-illustration {
-    max-width: 200px;
+    max-width: 300px;
   }
   
   .service-overview {
