@@ -66,110 +66,93 @@
     </div>
     </div>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
-      <div class="contact-bg">
-        <div class="floating-shape shape-1"></div>
-      </div>
-      
-      <div class="contact-container">
-        <div class="contact-inner">
-          <!-- Left Column: Contact Info -->
-          <div class="contact-info">
-            <div class="contact-info-content">
-              <h1 class="contact-title">Contact Me</h1>
-              <p class="contact-description">
-                Ready to start your next project? Get in touch and let's discuss how I can help bring your vision to life.
+    <!-- Contact Section - Full Screen -->
+    <section class="contact-fullscreen">
+      <div class="contact-fullscreen-inner">
+        <!-- Left Column: Contact Info -->
+        <div class="contact-left">
+          <div class="contact-left-content">
+            <h1 class="contact-heading">
+              Have a project<br/>
+              in mind? Say<br/>
+              hello, we'd love<br/>
+              to chat!
+            </h1>
+            
+            <div class="contact-details">
+              <a href="tel:+37379768982" class="contact-phone">
+                <svg class="phone-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                +373 797 68 982
+              </a>
+              
+              <a href="mailto:hello@maxdev.com" class="contact-email">
+                <svg class="email-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                hello@maxdev.com
+              </a>
+              
+              <p class="contact-brief">
+                If you have a project brief, please complete the form to get started
+                and we'll be in touch within 24 hours.
               </p>
               
-              <!-- Direct Contact -->
-              <div class="contact-methods">
-                <div class="contact-method">
-                  <span class="method-label">Email</span>
-                  <a href="mailto:hello@maxdev.com" class="method-value">hello@maxdev.com</a>
-                </div>
-                <div class="contact-method">
-                  <span class="method-label">Phone</span>
-                  <a href="tel:+1234567890" class="method-value">+1 (234) 567-890</a>
-                </div>
-              </div>
-              
-              <!-- Service Categories -->
-              <div class="service-categories">
-                <div class="service-category">
-                  <h3 class="category-title">Customer Support</h3>
-                  <p class="category-desc">Questions about services, pricing, or project timelines</p>
-                </div>
-                <div class="service-category">
-                  <h3 class="category-title">Feedback & Suggestions</h3>
-                  <p class="category-desc">Share your thoughts on improving our services</p>
-                </div>
-                <div class="service-category">
-                  <h3 class="category-title">Media Inquiries</h3>
-                  <p class="category-desc">Press, partnerships, and collaboration opportunities</p>
-                </div>
-              </div>
+              <!-- <p class="contact-alternative">
+                Alternatively, <a href="#" class="booking-link">book a call here</a>
+              </p> -->
             </div>
           </div>
-          
-          <!-- Right Column: Contact Form -->
-          <div class="contact-form-card">
-            <div class="form-header">
-              <h2 class="form-title">Send a Message</h2>
-              <p class="form-subtitle">I'll get back to you within 24 hours</p>
+        </div>
+        
+        <!-- Right Column: Contact Form -->
+        <div class="contact-right">
+          <form class="contact-form-modern" id="contactFormModern">
+            <div class="form-grid">
+              <div class="form-field">
+                <input type="text" id="fullName" name="fullName" class="form-input-modern" placeholder="Full name*" required>
+              </div>
+              
+              <div class="form-field">
+                <input type="email" id="email" name="email" class="form-input-modern" placeholder="Email address*" required>
+              </div>
+              
+              <div class="form-field">
+                <input type="tel" id="phone" name="phone" class="form-input-modern" placeholder="Phone number*" required>
+              </div>
+              
+              <div class="form-field">
+                <select id="source" name="source" class="form-select-modern">
+                  <option value="" disabled selected>How did you hear of us?*</option>
+                  <option value="google">Google Search</option>
+                  <option value="social">Social Media</option>
+                  <option value="referral">Referral</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              
+              <div class="form-field form-field-full">
+                <textarea id="message" name="message" class="form-textarea-modern" placeholder="Type your message here*" rows="6" required></textarea>
+              </div>
+              
+              <div class="form-field form-field-full">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="newsletter" class="form-checkbox">
+                  <span>I am happy to receive newsletters from MaxDev ✓</span>
+                </label>
+              </div>
             </div>
             
-            <form class="contact-form" id="contactForm">
-              <div class="form-row">
-                <div class="form-group">
-                  <input type="text" id="firstName" name="firstName" class="form-input" placeholder="First Name" required>
-                </div>
-                <div class="form-group">
-                  <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Last Name" required>
-                </div>
-              </div>
-              
-              <div class="form-group">
-                <div class="input-with-icon">
-                  <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5"/>
-                    <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="1.5"/>
-                  </svg>
-                  <input type="email" id="email" name="email" class="form-input with-icon" placeholder="Email Address" required>
-                </div>
-              </div>
-              
-              <div class="form-group">
-                <div class="phone-input-wrapper">
-                  <select class="country-select" id="countryCode" name="countryCode">
-                    <option value="+1">🇺🇸 +1</option>
-                    <option value="+44">🇬🇧 +44</option>
-                    <option value="+49">🇩🇪 +49</option>
-                    <option value="+33">🇫🇷 +33</option>
-                    <option value="+62">🇮🇩 +62</option>
-                  </select>
-                  <input type="tel" id="phone" name="phone" class="form-input phone-input" placeholder="Phone Number" required>
-                </div>
-              </div>
-              
-              <div class="form-group">
-                <div class="textarea-wrapper">
-                  <textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Tell me about your project or how I can help you..." maxlength="500" required></textarea>
-                  <div class="char-counter">
-                    <span id="charCount">0</span><span class="char-limit">/500</span>
-                  </div>
-                </div>
-              </div>
-              
-              <button type="submit" class="form-submit-btn">
-                <span class="btn-text">Send Message</span>
-              </button>
-              
-              <p class="form-disclaimer">
-                By contacting me, you agree to my <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
-              </p>
-            </form>
-          </div>
+            <!-- <p class="form-terms">
+              By submitting this form I accept MaxDev's <a href="#">Privacy Policy</a> &amp; <a href="#">T&amp;C's</a>.
+            </p> -->
+            
+            <button type="submit" class="form-submit-modern">
+              Submit your enquiry
+            </button>
+          </form>
         </div>
       </div>
     </section>
@@ -298,42 +281,20 @@
     <script>
       // Contact form functionality
       document.addEventListener('DOMContentLoaded', function() {
-        const form = document.getElementById('contactForm');
-        const submitBtn = form.querySelector('.form-submit-btn');
+        const form = document.getElementById('contactFormModern');
+        const submitBtn = form.querySelector('.form-submit-modern');
         const messageTextarea = form.querySelector('#message');
-        const charCount = document.getElementById('charCount');
-        
-        // Character counter for textarea
-        function updateCharCount() {
-          const count = messageTextarea.value.length;
-          charCount.textContent = count;
-          
-          // Change color when approaching limit
-          if (count > 450) {
-            charCount.style.color = '#ef4444';
-          } else if (count > 400) {
-            charCount.style.color = '#f59e0b';
-          } else {
-            charCount.style.color = '#9ca3af';
-          }
-        }
-        
-        // Add event listener for character counter
-        if (messageTextarea && charCount) {
-          messageTextarea.addEventListener('input', updateCharCount);
-          updateCharCount(); // Initialize
-        }
         
         // Form validation
         function validateForm() {
-          const firstName = form.querySelector('#firstName').value.trim();
-          const lastName = form.querySelector('#lastName').value.trim();
+          const fullName = form.querySelector('#fullName').value.trim();
           const email = form.querySelector('#email').value.trim();
           const phone = form.querySelector('#phone').value.trim();
+          const source = form.querySelector('#source').value;
           const message = form.querySelector('#message').value.trim();
           
           // Basic validation
-          if (!firstName || !lastName || !email || !phone || !message) {
+          if (!fullName || !email || !phone || !source || !message) {
             showNotification('Please fill in all required fields.', 'error');
             return false;
           }
@@ -444,8 +405,8 @@
           }
           
           // Show loading state
-          const originalText = submitBtn.querySelector('.btn-text').textContent;
-          submitBtn.querySelector('.btn-text').textContent = 'Sending...';
+          const originalText = submitBtn.textContent;
+          submitBtn.textContent = 'Sending...';
           submitBtn.disabled = true;
           
           // Simulate API call
@@ -453,11 +414,12 @@
             // Get form data
             const formData = new FormData(form);
             const data = {
-              firstName: formData.get('firstName'),
-              lastName: formData.get('lastName'),
+              fullName: formData.get('fullName'),
               email: formData.get('email'),
-              phone: formData.get('countryCode') + ' ' + formData.get('phone'),
-              message: formData.get('message')
+              phone: formData.get('phone'),
+              source: formData.get('source'),
+              message: formData.get('message'),
+              newsletter: formData.get('newsletter') === 'on'
             };
             
             // Log form data (in real implementation, send to server)
@@ -465,37 +427,26 @@
             
             // Reset form
             form.reset();
-            updateCharCount(); // Reset character counter
             
             // Show success message
-            showNotification('Thank you! Your message has been sent successfully. I\'ll get back to you within 24 hours.', 'success');
+            showNotification('Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.', 'success');
             
             // Reset button
-            submitBtn.querySelector('.btn-text').textContent = originalText;
+            submitBtn.textContent = originalText;
             submitBtn.disabled = false;
             
           }, 2000); // Simulate 2 second delay
         });
         
-        // Add simple input focus effects
-        const inputs = form.querySelectorAll('.form-input, .form-select, .form-textarea');
-        inputs.forEach(input => {
-          input.addEventListener('focus', function() {
-            this.style.borderColor = 'var(--primary-color)';
-          });
-          
-          input.addEventListener('blur', function() {
-            this.style.borderColor = 'rgba(124, 58, 237, 0.15)';
-          });
-        });
-        
         // Phone number formatting (basic)
         const phoneInput = form.querySelector('#phone');
-        phoneInput.addEventListener('input', function() {
-          // Remove non-numeric characters except spaces and dashes
-          let value = this.value.replace(/[^0-9\s\-]/g, '');
-          this.value = value;
-        });
+        if (phoneInput) {
+          phoneInput.addEventListener('input', function() {
+            // Remove non-numeric characters except spaces and dashes
+            let value = this.value.replace(/[^0-9\s\-]/g, '');
+            this.value = value;
+          });
+        }
       });
     </script>
   </body>
