@@ -73,8 +73,8 @@ function setActiveNavigation() {
       link.classList.add('active');
       link.parentElement.classList.add('active');
     } else if ((currentPage === 'index.html' || currentPage === '') && 
-               (linkText === 'Despre mine' || href === '' || href === 'index.html#about' || href === '#about')) {
-      // Despre mine section on index page - check by link text or various href patterns
+               (linkText === 'Home' || href === '' || href === 'index.html#about' || href === '#about')) {
+      // Home section on index page - check by link text or various href patterns
       link.classList.add('active');
       link.parentElement.classList.add('active');
     }

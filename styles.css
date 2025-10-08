@@ -88,7 +88,7 @@ a {
   position: relative;
 }
 
-/* Enhanced MaxDev logo */
+/* Enhanced MaxStudio logo */
 .logo a {
   display: inline-block;
   position: relative;
@@ -129,6 +129,7 @@ a {
   border-radius: 50%;
   animation: pulse-dot 2s ease-in-out infinite;
   opacity: 0.8;
+  display: none;
 }
 
 @keyframes pulse-dot {
@@ -144,11 +145,11 @@ a {
 }
 
 /* Hover effects */
-.logo a:hover {
+/* .logo a:hover {
   filter: drop-shadow(0 4px 12px rgba(124, 58, 237, 0.3));
   animation-duration: 1.5s;
   letter-spacing: 1px;
-}
+} */
 
 .logo a:hover::after {
   animation-duration: 0.8s;
