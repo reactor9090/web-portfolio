@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
   /* FONTS */
-  --headings-text: "Poppins", sans-serif;
+  --headings-text: "Manrope", sans-serif;
   --body-text: "Inter", sans-serif;
 
   /* COLORS */
@@ -303,7 +303,7 @@ a {
   border-radius: 50px;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   margin: 0 2px;
-  font-family: "Poppins", "Roboto", sans-serif;
+  font-family: var(--headings-text);
   border: 1px solid transparent;
   font-size: 16px;
   font-weight: 600;
@@ -1129,7 +1129,7 @@ a {
 .portfolio-hero-illustration {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   height: auto;
   opacity: 0;
   animation: fade-slide-up 0.8s ease-out 0.8s forwards;
@@ -1188,7 +1188,7 @@ a {
   }
   
   .portfolio-hero-illustration {
-    max-width: 300px;
+    max-width: 100%;
   }
 
 }
@@ -1211,7 +1211,7 @@ a {
   }
   
   .portfolio-hero-illustration {
-    max-width: 450px;
+    max-width: 100%;
   }
 }
 
@@ -1241,7 +1241,7 @@ a {
   }
   
   .portfolio-hero-illustration {
-    max-width: 500px;
+    max-width: 600px;
   }
 }
 
@@ -1252,7 +1252,7 @@ a {
   }
   
   .portfolio-hero-illustration {
-    max-width: 550px;
+    max-width: 700px;
   }
 }
 
@@ -1492,26 +1492,28 @@ a {
 
 /* View Project Button */
 .project-cta {
-  display: flex;
-  justify-content: center;
+  display: block;
+  width: 100%;
   margin-top: 8px;
 }
 
 .view-project-btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 14px 28px;
-  background: linear-gradient(135deg, var(--primary-color), #9333ea);
+  padding: 16px 28px;
+  width: 100%;
+  background: var(--secondary-color);
   color: white;
   font-family: var(--headings-text);
   font-weight: 600;
   font-size: 0.95rem;
   border: none;
-  border-radius: 50px;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.25);
+  box-shadow: 0 4px 16px rgba(31, 31, 31, 0.15);
   text-decoration: none;
   overflow: hidden;
   position: relative;
@@ -1524,15 +1526,15 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #9333ea, var(--primary-color));
+  background: var(--blacktext-color);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 1;
 }
 
 .view-project-btn:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 30px rgba(124, 58, 237, 0.35);
+  box-shadow: 0 6px 24px rgba(31, 31, 31, 0.25);
+  background: var(--blacktext-color);
 }
 
 .view-project-btn:hover::before {
@@ -3450,7 +3452,7 @@ a {
   max-width: 100%;
   width: auto;
   height: auto;
-  max-height: 350px;
+  max-height: 450px;
   filter: drop-shadow(0 20px 40px rgba(124, 58, 237, 0.15));
   transition: all 0.3s ease;
 }
@@ -3847,7 +3849,7 @@ a {
   }
   
   .services-hero-illustration {
-    max-height: 400px;
+    max-height: 500px;
   }
 }
 
@@ -3988,7 +3990,7 @@ a {
   }
   
   .services-hero-illustration {
-    max-height: 250px;
+    max-height: 400px;
   }
   
   /* Service pricing mobile adjustments */
@@ -6458,7 +6460,7 @@ a {
 .hero-illustration {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   height: auto;
 }
 
@@ -6621,20 +6623,20 @@ a {
   .hero-visual {
     margin-top: 20px;
     margin-bottom: 40px;
-    max-width: 280px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
 
   .hero-illustration {
-    max-width: 280px;
+    max-width: 100%;
   }
 
   .hero-vector {
     width: 100%;
     height: auto;
-    min-width: 240px;
-    max-height: 200px;
+    min-width: 320px;
+    max-height: 400px;
     object-fit: contain;
   }
 
@@ -6682,19 +6684,19 @@ a {
 
     .hero-visual {
         margin-bottom: 70px;
-        max-width: 320px;
+        max-width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
 
     .hero-illustration {
-        max-width: 320px;
+        max-width: 100%;
     }
 
     .hero-vector {
         width: 100%;
         height: auto;
-        max-height: 240px;
+        max-height: 450px;
         object-fit: contain;
     }
 
@@ -6768,13 +6770,13 @@ a {
     }
 
     .hero-illustration {
-        max-width: 380px;
+        max-width: 500px;
     }
 
     .hero-vector {
         width: 100%;
         height: auto;
-        max-height: 280px;
+        max-height: 400px;
         object-fit: contain;
     }
 
@@ -6849,13 +6851,13 @@ a {
     }
 
     .hero-illustration {
-        max-width: 450px;
+        max-width: 550px;
     }
 
     .hero-vector {
         width: 100%;
         height: auto;
-        max-height: 320px;
+        max-height: 440px;
         object-fit: contain;
     }
 
@@ -6937,14 +6939,14 @@ a {
   }
 
   .hero-illustration {
-    max-width: 500px;
+    max-width: 600px;
     width: 100%;
   }
 
   .hero-vector {
     width: 100%;
     height: auto;
-    max-height: 380px;
+    max-height: 500px;
     object-fit: contain;
   }
 
@@ -6986,14 +6988,14 @@ a {
   }
 
   .hero-illustration {
-    max-width: 500px;
+    max-width: 650px;
     width: 100%;
   }
 
   .hero-vector {
     width: 100%;
     height: auto;
-    max-height: 600px;
+    max-height: 700px;
     object-fit: contain;
   }
 
@@ -7049,14 +7051,14 @@ a {
   }
 
   .hero-illustration {
-    max-width: 600px;
+    max-width: 700px;
     width: 100%;
   }
 
   .hero-vector {
     width: 100%;
     height: auto;
-    max-height: 480px;
+    max-height: 600px;
     object-fit: contain;
   }
 
@@ -7301,26 +7303,24 @@ a {
     flex-direction: column;
   }
   
-  /* Hide vector images completely on mobile */
+  /* Show vector images on mobile */
   .card-image {
-    display: none;
+    display: flex;
+    width: 100%;
+    min-width: auto;
+    padding: 24px 24px 16px 24px;
+    justify-content: center;
+  }
+  
+  .card-image svg {
+    max-width: 140px;
+    max-height: 120px;
   }
   
   .card-content {
-    padding: 24px;
+    padding: 16px 24px 24px 24px;
     text-align: center;
     justify-content: flex-start;
-  }
-  
-  .card-icon {
-    width: 48px;
-    height: 48px;
-    margin: 0 auto 16px auto;
-  }
-  
-  .card-icon svg {
-    width: 28px;
-    height: 28px;
   }
   
   .card-title {
