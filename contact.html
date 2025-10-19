@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="mobile_menu.css" />
     <title>Get in Touch - MaxStudio Professional Web Development</title>
     <meta name="description" content="Ready to start your web development project? Contact MaxStudio for a free consultation and get your professional website built by an expert developer." />
+    <link rel="icon" type="image/png" href="images/Frame 1 (2).png" />
   </head>
   <body>
     <header>
@@ -81,17 +82,17 @@
             
             <div class="contact-details">
               <a href="tel:+37379768982" class="contact-phone">
-                <svg class="phone-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- <svg class="phone-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                </svg> -->
                 +373 797 68 982
               </a>
               
               <a href="mailto:contact.maxwebstudio@gmail.com" class="contact-email">
-                <svg class="email-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- <svg class="email-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                </svg> -->
                 contact.maxwebstudio@gmail.com
               </a>
               
@@ -109,7 +110,7 @@
         
         <!-- Right Column: Contact Form -->
         <div class="contact-right">
-          <form class="contact-form-modern" id="contactFormModern">
+          <form class="contact-form-modern" action="https://formspree.io/f/xwpraodb" method="POST" id="contactFormModern">
             <div class="form-grid">
               <div class="form-field">
                 <input type="text" id="fullName" name="fullName" class="form-input-modern" placeholder="Full name*" required>
@@ -125,7 +126,7 @@
               
               <div class="form-field">
                 <select id="source" name="source" class="form-select-modern">
-                  <option value="" disabled selected>How did you hear of us?*</option>
+                  <option value="" disabled selected>How did you hear of us?</option>
                   <option value="google">Google Search</option>
                   <option value="social">Social Media</option>
                   <option value="referral">Referral</option>
@@ -135,13 +136,6 @@
               
               <div class="form-field form-field-full">
                 <textarea id="message" name="message" class="form-textarea-modern" placeholder="Type your message here*" rows="6" required></textarea>
-              </div>
-              
-              <div class="form-field form-field-full">
-                <label class="checkbox-label">
-                  <input type="checkbox" name="newsletter" class="form-checkbox">
-                  <span>I am happy to receive newsletters from MaxStudio ✓</span>
-                </label>
               </div>
             </div>
             
@@ -290,11 +284,10 @@
           const fullName = form.querySelector('#fullName').value.trim();
           const email = form.querySelector('#email').value.trim();
           const phone = form.querySelector('#phone').value.trim();
-          const source = form.querySelector('#source').value;
           const message = form.querySelector('#message').value.trim();
           
           // Basic validation
-          if (!fullName || !email || !phone || !source || !message) {
+          if (!fullName || !email || !phone || !message) {
             showNotification('Please fill in all required fields.', 'error');
             return false;
           }
@@ -397,7 +390,7 @@
         }
         
         // Form submission
-        form.addEventListener('submit', function(e) {
+        form.addEventListener('submit', async function(e) {
           e.preventDefault();
           
           if (!validateForm()) {
@@ -409,33 +402,45 @@
           submitBtn.textContent = 'Sending...';
           submitBtn.disabled = true;
           
-          // Simulate API call
-          setTimeout(function() {
-            // Get form data
+          // Remove any existing success message
+          const existingMessage = document.querySelector('.form-success-message');
+          if (existingMessage) {
+            existingMessage.remove();
+          }
+          
+          try {
+            // Send form data to Formspree using Fetch API
             const formData = new FormData(form);
-            const data = {
-              fullName: formData.get('fullName'),
-              email: formData.get('email'),
-              phone: formData.get('phone'),
-              source: formData.get('source'),
-              message: formData.get('message'),
-              newsletter: formData.get('newsletter') === 'on'
-            };
+            const response = await fetch(form.action, {
+              method: 'POST',
+              body: formData,
+              headers: {
+                'Accept': 'application/json'
+              }
+            });
             
-            // Log form data (in real implementation, send to server)
-            console.log('Contact form submission:', data);
-            
-            // Reset form
-            form.reset();
-            
-            // Show success message
-            showNotification('Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.', 'success');
-            
-            // Reset button
+            if (response.ok) {
+              // Clear form inputs
+              form.reset();
+              
+              // Show success notification in top-right corner
+              showNotification('Message sent successfully! We\'ll get back to you within 24 hours.', 'success');
+              
+            } else {
+              // Handle error response
+              const data = await response.json();
+              const errorMessage = data.error || 'There was a problem submitting your form. Please try again.';
+              showNotification(errorMessage, 'error');
+            }
+          } catch (error) {
+            // Handle network or other errors
+            showNotification('There was a problem sending your message. Please try again later.', 'error');
+            console.error('Form submission error:', error);
+          } finally {
+            // Reset button state
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
-            
-          }, 2000); // Simulate 2 second delay
+          }
         });
         
         // Phone number formatting (basic)
