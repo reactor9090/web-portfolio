@@ -15,11 +15,42 @@
             <a href="index.html">MaxStudio</a>
           </div>
 
-          <nav class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </nav>
+          <!-- Mobile Navigation Actions -->
+          <div class="mobile-nav-actions">
+            <!-- Language Switcher (Mobile) -->
+            <div class="language-switcher language-switcher--mobile">
+              <button class="language-switcher-btn" id="languageSwitcherMobile" aria-label="Select Language" aria-haspopup="true" aria-expanded="false">
+                <img src="images/united-kingdom.png" alt="English" class="flag-icon" id="currentFlagMobile">
+                <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              
+              <div class="language-dropdown" id="languageDropdownMobile">
+                <button class="language-option" data-lang="en" data-flag="united-kingdom">
+                  <img src="images/united-kingdom.png" alt="English" class="flag-icon">
+                  <span class="language-name">ENGLISH</span>
+                  <svg class="check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                
+                <button class="language-option" data-lang="ro" data-flag="romania">
+                  <img src="images/romania.png" alt="Română" class="flag-icon">
+                  <span class="language-name">ROMÂNĂ</span>
+                  <svg class="check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <nav class="hamburger">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </nav>
+          </div>
 
           <div class="nav-bar">
             <ul>
@@ -36,6 +67,34 @@
           </div>
 
           <div class="contact-me">
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+              <button class="language-switcher-btn" id="languageSwitcher" aria-label="Select Language" aria-haspopup="true" aria-expanded="false">
+                <img src="images/united-kingdom.png" alt="English" class="flag-icon" id="currentFlag">
+                <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              
+              <div class="language-dropdown" id="languageDropdown">
+                <button class="language-option" data-lang="en" data-flag="united-kingdom">
+                  <img src="images/united-kingdom.png" alt="English" class="flag-icon">
+                  <span class="language-name">ENGLISH</span>
+                  <svg class="check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                
+                <button class="language-option" data-lang="ro" data-flag="romania">
+                  <img src="images/romania.png" alt="Română" class="flag-icon">
+                  <span class="language-name">ROMÂNĂ</span>
+                  <svg class="check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
             <a href="contact.html" class="contact-btn">
               <span class="contact-text">Contact us</span>
               <span class="contact-arrow">
@@ -129,17 +188,89 @@
       </div>
     </section>
 
+    <!-- Recent Projects Showcase Section -->
+    <section class="recent-projects-showcase">
+      <!-- Background Floating Shapes -->
+      <div class="recent-projects-bg">
+        <div class="recent-floating-shape recent-shape-1"></div>
+        <div class="recent-floating-shape recent-shape-2"></div>
+        <div class="recent-floating-shape recent-shape-3"></div>
+        <div class="recent-floating-shape recent-shape-4"></div>
+      </div>
+
+      <div class="recent-projects-showcase-inner">
+        <!-- Header -->
+        <div class="recent-projects-header">
+          <h2 class="recent-projects-main-title">Recent Projects</h2>
+          <p class="recent-projects-subtitle">
+            A glimpse of what I've built for clients.
+          </p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="recent-projects-grid">
+          <!-- Project Card 1 -->
+          <div class="recent-project-card">
+            <div class="recent-project-thumbnail">
+              <img
+                src="images/healthgymlaptop.png"
+                alt="Heart Gym & Wellness"
+              />
+            </div>
+            <div class="recent-project-info">
+              <h3 class="recent-project-name">Heart Gym & Wellness</h3>
+              <p class="recent-project-description">
+                Built with modern web technologies & custom animations
+              </p>
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="recent-project-card">
+            <div class="recent-project-thumbnail">
+              <img src="images/laptopmockupnobk.png" alt="TeamUp Platform" />
+            </div>
+            <div class="recent-project-info">
+              <h3 class="recent-project-name">TeamUp Platform</h3>
+              <p class="recent-project-description">
+                Collaborative workspace with real-time features
+              </p>
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="recent-project-card">
+            <div class="recent-project-thumbnail">
+              <img src="images/rmperformancemockup.png" alt="RM Performance" />
+            </div>
+            <div class="recent-project-info">
+              <h3 class="recent-project-name">RM Performance</h3>
+              <p class="recent-project-description">
+                High-performance coaching platform with booking system
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="recent-projects-cta-wrapper">
+          <a href="portfolio.html" class="recent-projects-cta-btn">
+            <span class="cta-btn__text">View Full Portfolio →</span>
+            <div class="cta-btn__bg"></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Social Proof Section -->
+    <!--
     <section class="social-proof">
       <div class="container">
         <div class="social-proof-inner">
-          <!-- Heading -->
           <h2 class="social-proof-title">Trusted By Clients Worldwide</h2>
 
-          <!-- Infinite Logo Carousel -->
           <div class="logo-carousel">
             <div class="logo-track">
-              <!-- First set of logos -->
               <div class="logo-item">
                 <img
                   src="images/xioamilogo.png"
@@ -182,7 +313,6 @@
                   class="client-logo"
                 />
               </div>
-              <!-- Duplicate set for seamless loop -->
               <div class="logo-item">
                 <img
                   src="images/xioamilogo.png"
@@ -228,13 +358,13 @@
             </div>
           </div>
 
-          <!-- Subtext -->
           <p class="social-proof-subtext">
             Based in Europe, serving clients globally
           </p>
         </div>
       </div>
     </section>
+    -->
 
     <!-- Mission Section -->
     <section class="mission">

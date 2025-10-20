@@ -16,11 +16,38 @@
             <a href="index.html">MaxStudio</a>
           </div>
 
-          <nav class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </nav>
+          <!-- Mobile Navigation Actions -->
+          <div class="mobile-nav-actions">
+            <div class="language-switcher language-switcher--mobile">
+              <button class="language-switcher-btn" id="languageSwitcherMobile" aria-label="Select Language" aria-haspopup="true" aria-expanded="false">
+                <img src="images/united-kingdom.png" alt="English" class="flag-icon" id="currentFlagMobile">
+                <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <div class="language-dropdown" id="languageDropdownMobile">
+                <button class="language-option" data-lang="en" data-flag="united-kingdom">
+                  <img src="images/united-kingdom.png" alt="English" class="flag-icon">
+                  <span class="language-name">ENGLISH</span>
+                  <svg class="check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <button class="language-option" data-lang="ro" data-flag="romania">
+                  <img src="images/romania.png" alt="Română" class="flag-icon">
+                  <span class="language-name">ROMÂNĂ</span>
+                  <svg class="check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <nav class="hamburger">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </nav>
+          </div>
 
           <div class="nav-bar">
             <ul>
@@ -37,6 +64,34 @@
           </div>
 
           <div class="contact-me">
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+              <button class="language-switcher-btn" id="languageSwitcher" aria-label="Select Language" aria-haspopup="true" aria-expanded="false">
+                <img src="images/united-kingdom.png" alt="English" class="flag-icon" id="currentFlag">
+                <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              
+              <div class="language-dropdown" id="languageDropdown">
+                <button class="language-option" data-lang="en" data-flag="united-kingdom">
+                  <img src="images/united-kingdom.png" alt="English" class="flag-icon">
+                  <span class="language-name">ENGLISH</span>
+                  <svg class="check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                
+                <button class="language-option" data-lang="ro" data-flag="romania">
+                  <img src="images/romania.png" alt="Română" class="flag-icon">
+                  <span class="language-name">ROMÂNĂ</span>
+                  <svg class="check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
             <a href="contact.html" class="contact-btn">
               <span class="contact-text">Contact us</span>
               <span class="contact-arrow">

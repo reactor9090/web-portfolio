@@ -92,6 +92,128 @@ window.addEventListener('hashchange', handleHashChange);
 // Initialize navigation on page load
 document.addEventListener('DOMContentLoaded', setActiveNavigation);
 
+// Language Switcher Functionality
+function initLanguageSwitcher() {
+  // Desktop language switcher
+  const languageSwitcher = document.getElementById('languageSwitcher');
+  const languageDropdown = document.getElementById('languageDropdown');
+  const currentFlag = document.getElementById('currentFlag');
+  
+  // Mobile language switcher
+  const languageSwitcherMobile = document.getElementById('languageSwitcherMobile');
+  const languageDropdownMobile = document.getElementById('languageDropdownMobile');
+  const currentFlagMobile = document.getElementById('currentFlagMobile');
+  
+  // All language options from both dropdowns
+  const languageOptions = document.querySelectorAll('.language-option');
+  
+  // Get saved language from localStorage or default to 'en'
+  let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
+  
+  // Set initial active state
+  updateActiveLanguage(currentLanguage);
+  
+  // Initialize desktop language switcher
+  if (languageSwitcher && languageDropdown) {
+    initSwitcher(languageSwitcher, languageDropdown, currentFlag);
+  }
+  
+  // Initialize mobile language switcher
+  if (languageSwitcherMobile && languageDropdownMobile) {
+    initSwitcher(languageSwitcherMobile, languageDropdownMobile, currentFlagMobile);
+  }
+  
+  // Handle language option clicks (works for both desktop and mobile)
+  languageOptions.forEach(option => {
+    option.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const selectedLang = option.getAttribute('data-lang');
+      const selectedFlag = option.getAttribute('data-flag');
+      
+      // Update current language
+      currentLanguage = selectedLang;
+      
+      // Update flags in both desktop and mobile buttons
+      if (currentFlag) {
+        currentFlag.src = `images/${selectedFlag}.png`;
+        currentFlag.alt = option.querySelector('.language-name').textContent;
+      }
+      if (currentFlagMobile) {
+        currentFlagMobile.src = `images/${selectedFlag}.png`;
+        currentFlagMobile.alt = option.querySelector('.language-name').textContent;
+      }
+      
+      // Update active state
+      updateActiveLanguage(selectedLang);
+      
+      // Save to localStorage
+      localStorage.setItem('selectedLanguage', selectedLang);
+      
+      // Close all dropdowns
+      if (languageDropdown) closeDropdown(languageDropdown, languageSwitcher);
+      if (languageDropdownMobile) closeDropdown(languageDropdownMobile, languageSwitcherMobile);
+      
+      console.log(`Language changed to: ${selectedLang}`);
+    });
+  });
+  
+  // Initialize a single language switcher instance
+  function initSwitcher(switcher, dropdown, flag) {
+    // Toggle dropdown on button click
+    switcher.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isActive = dropdown.classList.contains('active');
+      
+      if (isActive) {
+        closeDropdown(dropdown, switcher);
+      } else {
+        openDropdown(dropdown, switcher);
+      }
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!switcher.contains(e.target) && !dropdown.contains(e.target)) {
+        closeDropdown(dropdown, switcher);
+      }
+    });
+    
+    // Close dropdown on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && dropdown.classList.contains('active')) {
+        closeDropdown(dropdown, switcher);
+        switcher.focus();
+      }
+    });
+  }
+  
+  // Helper functions
+  function openDropdown(dropdown, switcher) {
+    dropdown.classList.add('active');
+    switcher.classList.add('active');
+    switcher.setAttribute('aria-expanded', 'true');
+  }
+  
+  function closeDropdown(dropdown, switcher) {
+    dropdown.classList.remove('active');
+    switcher.classList.remove('active');
+    switcher.setAttribute('aria-expanded', 'false');
+  }
+  
+  function updateActiveLanguage(lang) {
+    languageOptions.forEach(option => {
+      if (option.getAttribute('data-lang') === lang) {
+        option.classList.add('active');
+      } else {
+        option.classList.remove('active');
+      }
+    });
+  }
+}
+
+// Initialize language switcher when DOM is ready
+document.addEventListener('DOMContentLoaded', initLanguageSwitcher);
+
 // Mission Text Animation - Optimized
 class MissionReveal {
   constructor() {
@@ -866,9 +988,74 @@ window.addEventListener('load', () => {
   }
 });
 
+// Navbar Scroll-Reveal Behavior
+class NavbarScrollReveal {
+  constructor() {
+    this.navbar = document.querySelector('header');
+    this.lastScrollY = window.scrollY;
+    this.scrollThreshold = 10; // Minimum scroll distance to trigger hide/show
+    this.isScrolling = false;
+    
+    if (this.navbar) {
+      this.init();
+    }
+  }
+  
+  init() {
+    // Initialize navbar as visible
+    this.navbar.classList.add('navbar-visible');
+    
+    // Use requestAnimationFrame for smooth performance
+    window.addEventListener('scroll', () => {
+      if (!this.isScrolling) {
+        window.requestAnimationFrame(() => {
+          this.handleScroll();
+          this.isScrolling = false;
+        });
+        this.isScrolling = true;
+      }
+    }, { passive: true });
+  }
+  
+  handleScroll() {
+    const currentScrollY = window.scrollY;
+    
+    // Don't hide navbar at the very top of the page
+    if (currentScrollY <= 0) {
+      this.navbar.classList.remove('navbar-hidden');
+      this.navbar.classList.add('navbar-visible');
+      this.lastScrollY = currentScrollY;
+      return;
+    }
+    
+    // Check if scroll distance is significant enough
+    const scrollDifference = Math.abs(currentScrollY - this.lastScrollY);
+    
+    if (scrollDifference < this.scrollThreshold) {
+      return;
+    }
+    
+    // Scrolling down - hide navbar
+    if (currentScrollY > this.lastScrollY && currentScrollY > 100) {
+      this.navbar.classList.remove('navbar-visible');
+      this.navbar.classList.add('navbar-hidden');
+    } 
+    // Scrolling up - show navbar
+    else if (currentScrollY < this.lastScrollY) {
+      this.navbar.classList.remove('navbar-hidden');
+      this.navbar.classList.add('navbar-visible');
+    }
+    
+    this.lastScrollY = currentScrollY;
+  }
+}
 
-
-
-
-
+// Initialize navbar scroll reveal
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    new NavbarScrollReveal();
+  });
+} else {
+  new NavbarScrollReveal();
+}
 
