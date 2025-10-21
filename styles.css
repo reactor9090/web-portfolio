@@ -1518,6 +1518,7 @@ header.navbar-visible {
   opacity: 0;
   animation: fade-slide-up 0.8s ease-out forwards;
   animation-delay: var(--card-delay, 0.2s);
+  scroll-margin-top: 120px; /* Offset for fixed header */
 }
 
 .project-card:nth-child(1) { --card-delay: 0.2s; }
@@ -7499,6 +7500,8 @@ header.navbar-visible {
 
 /* Project Card */
 .recent-project-card {
+  display: block;
+  text-decoration: none;
   background: white;
   border-radius: 20px;
   overflow: hidden;
@@ -7559,8 +7562,10 @@ header.navbar-visible {
 /* CTA Button Wrapper */
 .recent-projects-cta-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 .recent-projects-cta-btn {
@@ -7579,9 +7584,41 @@ header.navbar-visible {
   overflow: hidden;
   z-index: 1;
   text-decoration: none;
+}
+
+/* Primary Button */
+.recent-projects-cta-btn--primary {
   background: linear-gradient(135deg, var(--primary-color), #9333ea);
   color: white;
   box-shadow: 0 8px 25px rgba(124, 58, 237, 0.3);
+}
+
+.recent-projects-cta-btn--primary .cta-btn__bg {
+  background: linear-gradient(135deg, #9333ea, var(--primary-color));
+}
+
+.recent-projects-cta-btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(124, 58, 237, 0.4);
+}
+
+/* Secondary Button */
+.recent-projects-cta-btn--secondary {
+  background: white;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.1);
+}
+
+.recent-projects-cta-btn--secondary .cta-btn__bg {
+  background: linear-gradient(135deg, var(--primary-color), #9333ea);
+}
+
+.recent-projects-cta-btn--secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(124, 58, 237, 0.25);
+  color: white;
+  border-color: transparent;
 }
 
 .recent-projects-cta-btn .cta-btn__text {
@@ -7601,11 +7638,6 @@ header.navbar-visible {
   transform: translateY(100%);
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 1;
-}
-
-.recent-projects-cta-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(124, 58, 237, 0.4);
 }
 
 .recent-projects-cta-btn:hover .cta-btn__bg {
