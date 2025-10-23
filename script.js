@@ -107,8 +107,23 @@ function initLanguageSwitcher() {
   // All language options from both dropdowns
   const languageOptions = document.querySelectorAll('.language-option');
   
-  // Get saved language from localStorage or default to 'en'
-  let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
+  // Detect current language from URL
+  const currentPath = window.location.pathname;
+  const pathParts = currentPath.split('/').filter(part => part);
+  let currentLanguage = 'en'; // default
+  
+  // Check if URL contains /en/ or /ro/
+  if (pathParts.includes('en')) {
+    currentLanguage = 'en';
+  } else if (pathParts.includes('ro')) {
+    currentLanguage = 'ro';
+  }
+  
+  // Save detected language to localStorage
+  localStorage.setItem('selectedLanguage', currentLanguage);
+  
+  // Update flag icons based on current language
+  updateCurrentFlag(currentLanguage);
   
   // Set initial active state
   updateActiveLanguage(currentLanguage);
@@ -128,32 +143,24 @@ function initLanguageSwitcher() {
     option.addEventListener('click', (e) => {
       e.stopPropagation();
       const selectedLang = option.getAttribute('data-lang');
-      const selectedFlag = option.getAttribute('data-flag');
       
-      // Update current language
-      currentLanguage = selectedLang;
-      
-      // Update flags in both desktop and mobile buttons
-      if (currentFlag) {
-        currentFlag.src = `images/${selectedFlag}.png`;
-        currentFlag.alt = option.querySelector('.language-name').textContent;
-      }
-      if (currentFlagMobile) {
-        currentFlagMobile.src = `images/${selectedFlag}.png`;
-        currentFlagMobile.alt = option.querySelector('.language-name').textContent;
+      // Don't navigate if already on selected language
+      if (selectedLang === currentLanguage) {
+        // Close all dropdowns
+        if (languageDropdown) closeDropdown(languageDropdown, languageSwitcher);
+        if (languageDropdownMobile) closeDropdown(languageDropdownMobile, languageSwitcherMobile);
+        return;
       }
       
-      // Update active state
-      updateActiveLanguage(selectedLang);
+      // Navigate to the same page in the selected language
+      const newPath = switchLanguagePath(currentPath, selectedLang);
       
-      // Save to localStorage
+      // Save language preference
       localStorage.setItem('selectedLanguage', selectedLang);
       
-      // Close all dropdowns
-      if (languageDropdown) closeDropdown(languageDropdown, languageSwitcher);
-      if (languageDropdownMobile) closeDropdown(languageDropdownMobile, languageSwitcherMobile);
-      
-      console.log(`Language changed to: ${selectedLang}`);
+      // Navigate to new language version (preserving hash if present)
+      const hash = window.location.hash;
+      window.location.href = newPath + hash;
     });
   });
   
@@ -209,6 +216,50 @@ function initLanguageSwitcher() {
       }
     });
   }
+  
+  function updateCurrentFlag(lang) {
+    const flagMap = {
+      'en': { src: '../images/united-kingdom.png', alt: 'English' },
+      'ro': { src: '../images/romania.png', alt: 'Română' }
+    };
+    
+    const flagData = flagMap[lang] || flagMap['en'];
+    
+    if (currentFlag) {
+      currentFlag.src = flagData.src;
+      currentFlag.alt = flagData.alt;
+    }
+    if (currentFlagMobile) {
+      currentFlagMobile.src = flagData.src;
+      currentFlagMobile.alt = flagData.alt;
+    }
+  }
+}
+
+// Helper function to switch language in URL path
+function switchLanguagePath(currentPath, targetLang) {
+  // Get the current page filename
+  const pathParts = currentPath.split('/').filter(part => part);
+  let pageFilename = 'index.html';
+  
+  // Find the HTML filename in the path
+  for (let i = pathParts.length - 1; i >= 0; i--) {
+    if (pathParts[i].endsWith('.html')) {
+      pageFilename = pathParts[i];
+      break;
+    }
+  }
+  
+  // If no .html found, check if last part could be a page name
+  if (!pageFilename.endsWith('.html') && pathParts.length > 0) {
+    const lastPart = pathParts[pathParts.length - 1];
+    if (lastPart !== 'en' && lastPart !== 'ro') {
+      pageFilename = lastPart + '.html';
+    }
+  }
+  
+  // Construct new path: /{lang}/{page}
+  return `/${targetLang}/${pageFilename}`;
 }
 
 // Initialize language switcher when DOM is ready
