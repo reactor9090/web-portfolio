@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Romanian Homepage (Default) -->
+  <url>
+    <loc>https://maxstudioweb.com/index.html</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/index.html"/>
+  </url>
+  
+  <!-- English Homepage -->
+  <url>
+    <loc>https://maxstudioweb.com/en/index.html</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/index.html"/>
+  </url>
+  
+  <!-- Romanian Portfolio -->
+  <url>
+    <loc>https://maxstudioweb.com/portfolio.html</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/portfolio.html"/>
+  </url>
+  
+  <!-- English Portfolio -->
+  <url>
+    <loc>https://maxstudioweb.com/en/portfolio.html</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/portfolio.html"/>
+  </url>
+  
+  <!-- Romanian Services -->
+  <url>
+    <loc>https://maxstudioweb.com/servicii.html</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/servicii.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/servicii.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/servicii.html"/>
+  </url>
+  
+  <!-- English Services -->
+  <url>
+    <loc>https://maxstudioweb.com/en/servicii.html</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/servicii.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/servicii.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/servicii.html"/>
+  </url>
+  
+  <!-- Romanian Contact -->
+  <url>
+    <loc>https://maxstudioweb.com/contact.html</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/contact.html"/>
+  </url>
+  
+  <!-- English Contact -->
+  <url>
+    <loc>https://maxstudioweb.com/en/contact.html</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/contact.html"/>
+  </url>
+  
+</urlset>

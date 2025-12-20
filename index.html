@@ -1,150 +1,2099 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="We create custom websites that help businesses grow online. Professional web design and development services tailored to your goals. Get a free consultation today."
+      content="Creare siteuri web la comandă: design UI/UX profesional, dezvoltare personalizată și optimizare SEO. MaxStudioWeb - partenerul tău pentru prezența online de succes."
     />
-    <title>We Create Modern Websites That Convert | MaxStudio</title>
-    <link rel="icon" type="image/png" href="images/Frame 1 (2).png" />
-    <meta
-      name="google-site-verification"
-      content="umWEQIZofDbszhMbXHMxtKDAe2xY-axGbpUzk-V8BoQ"
-    />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Creare Site-uri Web Profesionale | MaxStudioWeb</title>
+    <link rel="icon" type="image/png" href="../images/Frame 1 (2).png" />
 
-    <!-- Language detection and redirect -->
-    <script>
-      (function () {
-        // Check if user has a saved language preference
-        const savedLang = localStorage.getItem("selectedLanguage");
-
-        // Get browser language
-        const browserLang = navigator.language || navigator.userLanguage;
-        const langCode = browserLang.split("-")[0]; // Get just 'en' from 'en-US'
-
-        // Determine which language to use
-        let targetLang = "en"; // default
-
-        if (savedLang && (savedLang === "en" || savedLang === "ro")) {
-          targetLang = savedLang;
-        } else if (langCode === "ro") {
-          targetLang = "ro";
-        }
-
-        // Redirect to the appropriate language version
-        window.location.href = `/${targetLang}/index.html`;
-      })();
-    </script>
-
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Oxygen, Ubuntu, Cantarell, sans-serif;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        color: white;
-      }
-
-      .loader {
-        text-align: center;
-      }
-
-      .loader h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        animation: pulse 1.5s ease-in-out infinite;
-      }
-
-      .loader p {
-        font-size: 1.1rem;
-        opacity: 0.9;
-      }
-
-      .spinner {
-        width: 50px;
-        height: 50px;
-        border: 4px solid rgba(255, 255, 255, 0.3);
-        border-top: 4px solid white;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-        margin: 2rem auto;
-      }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-
-      @keyframes pulse {
-        0%,
-        100% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0.7;
-        }
-      }
-
-      .manual-links {
-        margin-top: 2rem;
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-      }
-
-      .manual-links a {
-        color: white;
-        text-decoration: none;
-        padding: 0.75rem 1.5rem;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 8px;
-        backdrop-filter: blur(10px);
-        transition: background 0.3s ease;
-      }
-
-      .manual-links a:hover {
-        background: rgba(255, 255, 255, 0.3);
-      }
-    </style>
+    <!-- Alternative de limbă pentru SEO -->
+    <link rel="alternate" hreflang="en" href="/en/index.html" />
+    <link rel="alternate" hreflang="ro" href="/ro/index.html" />
+    <link rel="alternate" hreflang="x-default" href="/en/index.html" />
   </head>
   <body>
-    <div class="loader">
-      <h1>MaxStudio</h1>
-      <div class="spinner"></div>
-      <p>Redirecting to your preferred language...</p>
-      <p>Redirecționare către limba preferată...</p>
+    <header>
+      <div class="container">
+        <div class="header-inner">
+          <div class="logo">
+            <a href="index.html">MaxStudio</a>
+          </div>
 
-      <div class="manual-links">
-        <a href="/en/index.html">English</a>
-        <a href="/ro/index.html">Română</a>
+          <!-- Mobile Navigation Actions -->
+          <div class="mobile-nav-actions">
+            <!-- Language Switcher (Mobile) -->
+            <div class="language-switcher language-switcher--mobile">
+              <button
+                class="language-switcher-btn"
+                id="languageSwitcherMobile"
+                aria-label="Select Language"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img
+                  src="../images/united-kingdom.png"
+                  alt="English"
+                  class="flag-icon"
+                  id="currentFlagMobile"
+                />
+                <svg
+                  class="chevron-icon"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 9L12 15L18 9"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+
+              <div class="language-dropdown" id="languageDropdownMobile">
+                <button
+                  class="language-option"
+                  data-lang="en"
+                  data-flag="united-kingdom"
+                >
+                  <img
+                    src="../images/united-kingdom.png"
+                    alt="English"
+                    class="flag-icon"
+                  />
+                  <span class="language-name">ENGLISH</span>
+                  <svg
+                    class="check-icon"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+
+                <button
+                  class="language-option"
+                  data-lang="ro"
+                  data-flag="romania"
+                >
+                  <img
+                    src="../images/romania.png"
+                    alt="Română"
+                    class="flag-icon"
+                  />
+                  <span class="language-name">ROMÂNĂ</span>
+                  <svg
+                    class="check-icon"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <nav class="hamburger">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </nav>
+          </div>
+
+          <div class="nav-bar">
+            <ul>
+              <li>
+                <a href="index.html">Acasă</a>
+              </li>
+              <li>
+                <a href="portfolio.html">Portofoliu</a>
+              </li>
+              <li>
+                <a href="servicii.html">Servicii</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact-me">
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+              <button
+                class="language-switcher-btn"
+                id="languageSwitcher"
+                aria-label="Select Language"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img
+                  src="../images/united-kingdom.png"
+                  alt="English"
+                  class="flag-icon"
+                  id="currentFlag"
+                />
+                <svg
+                  class="chevron-icon"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 9L12 15L18 9"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+
+              <div class="language-dropdown" id="languageDropdown">
+                <button
+                  class="language-option"
+                  data-lang="en"
+                  data-flag="united-kingdom"
+                >
+                  <img
+                    src="../images/united-kingdom.png"
+                    alt="English"
+                    class="flag-icon"
+                  />
+                  <span class="language-name">ENGLISH</span>
+                  <svg
+                    class="check-icon"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+
+                <button
+                  class="language-option"
+                  data-lang="ro"
+                  data-flag="romania"
+                >
+                  <img
+                    src="../images/romania.png"
+                    alt="Română"
+                    class="flag-icon"
+                  />
+                  <span class="language-name">ROMÂNĂ</span>
+                  <svg
+                    class="check-icon"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <a href="contact.html" class="contact-btn">
+              <span class="contact-text">Contactați-ne</span>
+              <span class="contact-arrow">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 18L15 12L9 6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+      <div class="mobile-menu-content">
+        <nav class="mobile-nav">
+          <ul class="mobile-nav-links">
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="portfolio.html">Portofoliu</a></li>
+            <li><a href="servicii.html">Servicii</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Începeți</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
 
-    <noscript>
-      <style>
-        .loader {
-          display: none;
-        }
-      </style>
-      <div style="text-align: center; padding: 2rem">
-        <h1>MaxStudio</h1>
-        <p>Please enable JavaScript or select your language:</p>
-        <div style="margin-top: 2rem">
-          <a href="/en/index.html" style="margin: 0 1rem">English</a>
-          <a href="/ro/index.html" style="margin: 0 1rem">Română</a>
+    <section class="hero">
+      <!-- Background Elements -->
+      <div class="hero-bg">
+        <div class="hero-bg__gradient"></div>
+        <div class="hero-bg__shapes">
+          <div class="floating-shape shape-1"></div>
+          <div class="floating-shape shape-2"></div>
+          <div class="floating-shape shape-3"></div>
         </div>
       </div>
-    </noscript>
+
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <div class="hero-headline">
+              <h1 class="hero-title">
+                Site-uri web
+                <span class="hero-title--accent">Create Pentru Rezultate</span>
+              </h1>
+            </div>
+
+            <div class="hero-subtitle">
+              <p class="hero-description">
+                Construim site-uri moderne, orientate spre vânzare, pentru
+                startup-uri și afaceri din întreaga lume.
+              </p>
+            </div>
+
+            <div class="hero-cta">
+              <a href="contact.html" class="cta-btn cta-btn--primary">
+                <span class="cta-btn__text">Obțineți Ofertă Gratuită</span>
+                <div class="cta-btn__bg"></div>
+              </a>
+              <a href="portfolio.html" class="cta-btn cta-btn--secondary">
+                <span class="cta-btn__text">Vezi Proiectele Noastre</span>
+                <div class="cta-btn__bg"></div>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-illustration">
+              <img
+                src="../images/illustrations/Coworking-amico.svg"
+                alt="Freelance web developer illustration"
+                class="hero-vector"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Projects Showcase Section -->
+    <section class="recent-projects-showcase">
+      <!-- Background Floating Shapes -->
+      <div class="recent-projects-bg">
+        <div class="recent-floating-shape recent-shape-1"></div>
+        <div class="recent-floating-shape recent-shape-2"></div>
+        <div class="recent-floating-shape recent-shape-3"></div>
+        <div class="recent-floating-shape recent-shape-4"></div>
+      </div>
+
+      <div class="recent-projects-showcase-inner">
+        <!-- Header -->
+        <div class="recent-projects-header">
+          <h2 class="recent-projects-main-title">Proiecte Recente</h2>
+          <p class="recent-projects-subtitle">
+            Descoperă ce am construit pentru clienții mei.
+          </p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="recent-projects-grid">
+          <!-- Project Card 1 -->
+          <a href="portfolio.html#heart-gym" class="recent-project-card">
+            <div class="recent-project-thumbnail">
+              <img
+                src="../images/healthgymlaptop.png"
+                alt="Heart Gym & Wellness"
+              />
+            </div>
+            <div class="recent-project-info">
+              <h3 class="recent-project-name">Heart Gym & Wellness</h3>
+              <p class="recent-project-description">
+                Am realizat un site web conceput pentru a prezenta clar
+                serviciile sălii de fitness și diferitele niveluri de abonament,
+                simplificând întregul proces de înscriere al clienților.
+              </p>
+            </div>
+          </a>
+
+          <!-- Project Card 2 -->
+          <a href="portfolio.html#teamup" class="recent-project-card">
+            <div class="recent-project-thumbnail">
+              <img src="../images/laptopmockupnobk.png" alt="TeamUp Platform" />
+            </div>
+            <div class="recent-project-info">
+              <h3 class="recent-project-name">TeamUp Teambuilding</h3>
+              <p class="recent-project-description">
+                Am realizat un website corporativ modern și rapid, axat pe
+                prezentarea elegantă a locațiilor pentru evenimente și pe
+                generarea unei creșteri semnificative a cererilor calificate de
+                la companii.
+              </p>
+            </div>
+          </a>
+
+          <!-- Project Card 3 -->
+          <a href="portfolio.html#rm-performance" class="recent-project-card">
+            <div class="recent-project-thumbnail">
+              <img
+                src="../images/rmperformancemockup.png"
+                alt="RM Performance"
+              />
+            </div>
+            <div class="recent-project-info">
+              <h3 class="recent-project-name">RM Performance Academy</h3>
+              <p class="recent-project-description">
+                Un landing page rapid, creat pentru a evidenția echipa de
+                antrenori și serviciile oferite de echipă, concepută pentru a
+                atrage cât mai mulți clienți noi.
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="recent-projects-cta-wrapper">
+          <a
+            href="contact.html"
+            class="recent-projects-cta-btn recent-projects-cta-btn--primary"
+          >
+            <span class="cta-btn__text">Programează o consultare</span>
+            <div class="cta-btn__bg"></div>
+          </a>
+          <a
+            href="portfolio.html"
+            class="recent-projects-cta-btn recent-projects-cta-btn--secondary"
+          >
+            <span class="cta-btn__text">Portofoliul Complet</span>
+            <div class="cta-btn__bg"></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <!--
+    <section class="social-proof">
+      <div class="container">
+        <div class="social-proof-inner">
+          <h2 class="social-proof-title">Trusted By Clients Worldwide</h2>
+
+          <div class="logo-carousel">
+            <div class="logo-track">
+              <div class="logo-item">
+                <img
+                  src="../images/xioamilogo.png"
+                  alt="Xiaomi"
+                  class="client-logo"
+                />
+              </div>
+              <div class="logo-item">
+                <img
+                  src="../images/teamuplogonew.jpg"
+                  alt="Xiaomi"
+                  class="client-logo"
+                />
+              </div>
+              <div class="logo-item">
+                <img
+                  src="../images/teamperfomancelogo.png"
+                  alt="Xiaomi"
+                  class="client-logo"
+                />
+              </div>
+              <div class="logo-item">
+                <img
+                  src="../images/xioamilogo.png"
+                  alt="Xiaomi"
+                  class="client-logo"
+                />
+              </div>
+              <div class="logo-item">
+                <img
+                  src="../images/xioamilogo.png"
+                  alt="Xiaomi"
+                  class="client-logo"
+                />
+              </div>
+              <div class="logo-item">
+                <img
+                  src="../images/xioamilogo.png"
+                  alt="Xiaomi"
+                  class="client-logo"
+                />
+              </div>
+              <div class="logo-item">
+                <img
+                  src="../images/xioamilogo.png"
+                  alt="Xiaomi"
+                  class="client-logo"
+                />
+              </div>
+              <div class="logo-item">
+                <img
+                  src="../images/xioamilogo.png"
+                  alt="Xiaomi"
+                  class="client-logo"
+                />
+              </div>
+              <div class="logo-item">
+                <img
+                  src="../images/xioamilogo.png"
+                  alt="Xiaomi"
+                  class="client-logo"
+                />
+              </div>
+              <div class="logo-item">
+                <img
+                  src="../images/xioamilogo.png"
+                  alt="Xiaomi"
+                  class="client-logo"
+                />
+              </div>
+              <div class="logo-item">
+                <img
+                  src="../images/xioamilogo.png"
+                  alt="Xiaomi"
+                  class="client-logo"
+                />
+              </div>
+              <div class="logo-item">
+                <img
+                  src="../images/xioamilogo.png"
+                  alt="Xiaomi"
+                  class="client-logo"
+                />
+              </div>
+            </div>
+          </div>
+
+          <p class="social-proof-subtext">
+            Based in Europe, serving clients globally
+          </p>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!-- Mission Section -->
+    <section class="mission">
+      <!-- Floating Shapes -->
+      <div class="floating-shape shape-1"></div>
+      <div class="floating-shape shape-2"></div>
+      <div class="floating-shape shape-3"></div>
+
+      <div class="container">
+        <div class="mission-inner">
+          <div class="mission-label">
+            <span class="mission-badge">Misiunea Noastră</span>
+          </div>
+          <div class="mission-content">
+            <h2 class="mission-text">
+              <span class="reveal-word" data-word="1">Construim</span>
+              <span class="reveal-word" data-word="2">experiențe</span>
+              <span class="reveal-word" data-word="3">digitale</span>
+              <span class="reveal-word" data-word="4">care</span>
+              <span class="reveal-word" data-word="5">inspiră</span>
+              <span class="reveal-word" data-word="6">încredere,</span>
+              <span class="reveal-word" data-word="7">spun</span>
+              <span class="reveal-word" data-word="8">povestea</span>
+              <span class="reveal-word" data-word="9">brandului</span>
+              <span class="reveal-word" data-word="10">tău</span>
+              <span class="reveal-word" data-word="11">și</span>
+              <span class="reveal-word" data-word="12">transformă</span>
+              <span class="reveal-word" data-word="13">vizitatorii</span>
+              <span class="reveal-word" data-word="14">în</span>
+              <span class="reveal-word" data-word="15">clienți</span>
+              <!-- <span class="reveal-word" data-word="16">clienți</span> -->
+              <!-- <span class="reveal-word" data-word="17">munca</span>
+              <span class="reveal-word" data-word="18">în</span>
+              <span class="reveal-word" data-word="19">cel</span>
+              <span class="reveal-word" data-word="20">mai</span>
+              <span class="reveal-word" data-word="21">bun</span>
+              <span class="reveal-word" data-word="22">mod</span>
+              <span class="reveal-word" data-word="23">posibil</span> -->
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Me Section -->
+    <section class="why-choose">
+      <div class="container">
+        <div class="why-choose-inner">
+          <div class="why-choose-header">
+            <span class="why-choose-badge">De Ce Noi</span>
+            <h2 class="why-choose-title">
+              Împreună construim formula ta pentru
+              <span class="title-highlight">Succes Online</span>
+            </h2>
+          </div>
+
+          <div class="why-choose-cards">
+            <!-- Card 1: Expert Development -->
+            <div class="why-card">
+              <div class="card-image">
+                <svg
+                  width="160"
+                  height="140"
+                  viewBox="0 0 160 140"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!-- Monitor -->
+                  <rect
+                    x="20"
+                    y="30"
+                    width="120"
+                    height="70"
+                    rx="8"
+                    fill="#1F2937"
+                    stroke="#374151"
+                    stroke-width="2"
+                  />
+                  <rect
+                    x="25"
+                    y="35"
+                    width="110"
+                    height="60"
+                    rx="4"
+                    fill="#111827"
+                  />
+                  <!-- Code Lines -->
+                  <rect x="30" y="40" width="25" height="3" fill="#10B981" />
+                  <rect x="60" y="40" width="20" height="3" fill="#F59E0B" />
+                  <rect x="85" y="40" width="30" height="3" fill="#EF4444" />
+                  <rect x="30" y="48" width="35" height="3" fill="#8B5CF6" />
+                  <rect x="70" y="48" width="25" height="3" fill="#06B6D4" />
+                  <rect x="30" y="56" width="20" height="3" fill="#F97316" />
+                  <rect x="55" y="56" width="40" height="3" fill="#84CC16" />
+                  <rect x="30" y="64" width="30" height="3" fill="#EC4899" />
+                  <rect x="65" y="64" width="15" height="3" fill="#14B8A6" />
+                  <rect x="85" y="64" width="25" height="3" fill="#F472B6" />
+                  <!-- Stand -->
+                  <rect x="65" y="100" width="30" height="8" fill="#6B7280" />
+                  <rect x="50" y="108" width="60" height="4" fill="#9CA3AF" />
+                  <!-- Success Badge -->
+                  <circle cx="130" cy="20" r="15" fill="#10B981" />
+                  <path
+                    d="M124 20L128 24L136 16"
+                    stroke="white"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Soluții Personalizate & Scalabile</h3>
+                <p class="card-description">
+                  Nu livrăm
+                  <span style="color: #7c3aed; font-weight: 600">șabloane</span
+                  >. Construim
+                  <span style="color: #7c3aed; font-weight: 600"
+                    >soluții autentice</span
+                  >,
+                  <span style="color: #7c3aed; font-weight: 600"
+                    >gândite pe termen lung</span
+                  >, bazate pe arhitecturi moderne care
+                  <span style="color: #7c3aed; font-weight: 600">cresc</span>
+                  odată cu afacerea și evoluția pieței.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2: Lightning Performance -->
+            <div class="why-card">
+              <div class="card-image">
+                <svg
+                  width="160"
+                  height="140"
+                  viewBox="0 0 160 140"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!-- Speedometer Background -->
+                  <circle
+                    cx="80"
+                    cy="70"
+                    r="50"
+                    fill="none"
+                    stroke="#E5E7EB"
+                    stroke-width="6"
+                  />
+                  <circle
+                    cx="80"
+                    cy="70"
+                    r="35"
+                    fill="none"
+                    stroke="#D1D5DB"
+                    stroke-width="4"
+                  />
+                  <!-- Speed Arcs -->
+                  <path
+                    d="M 45 45 A 35 35 0 0 1 115 45"
+                    stroke="#10B981"
+                    stroke-width="6"
+                    fill="none"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M 50 95 A 35 35 0 0 1 110 95"
+                    stroke="#F59E0B"
+                    stroke-width="6"
+                    fill="none"
+                    stroke-linecap="round"
+                  />
+                  <!-- Center Circle -->
+                  <circle cx="80" cy="70" r="15" fill="#7C3AED" />
+                  <!-- Speed Indicator -->
+                  <line
+                    x1="80"
+                    y1="70"
+                    x2="95"
+                    y2="55"
+                    stroke="white"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                  <!-- Performance Dots -->
+                  <circle cx="40" cy="40" r="4" fill="#EF4444" opacity="0.8" />
+                  <circle cx="120" cy="40" r="4" fill="#10B981" opacity="0.8" />
+                  <circle cx="40" cy="100" r="4" fill="#F59E0B" opacity="0.8" />
+                  <circle
+                    cx="120"
+                    cy="100"
+                    r="4"
+                    fill="#8B5CF6"
+                    opacity="0.8"
+                  />
+                  <!-- Lightning Bolt -->
+                  <path
+                    d="M75 25L70 35L75 35L70 45L80 30L75 30L80 25Z"
+                    fill="#FBBF24"
+                  />
+                </svg>
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">
+                  Performanță Ultrarapidă (Scoruri A+ Garantate)
+                </h3>
+                <p class="card-description">
+                  Fără timp pierdut. Optimizăm fiecare
+                  <span style="color: #7c3aed; font-weight: 600"
+                    >milisecundă</span
+                  >
+                  pentru a livra site-uri cu
+                  <span style="color: #7c3aed; font-weight: 600"
+                    >scoruri perfecte de viteză</span
+                  >
+                  (<span style="color: #7c3aed; font-weight: 600"
+                    >Lighthouse A+</span
+                  >), esențiale pentru
+                  <span style="color: #7c3aed; font-weight: 600">SEO.</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3: Modern Design -->
+            <div class="why-card">
+              <div class="card-image">
+                <svg
+                  width="160"
+                  height="140"
+                  viewBox="0 0 160 140"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!-- Browser Window -->
+                  <rect
+                    x="20"
+                    y="20"
+                    width="120"
+                    height="100"
+                    rx="8"
+                    fill="white"
+                    stroke="#E5E7EB"
+                    stroke-width="2"
+                  />
+                  <!-- Browser Header -->
+                  <rect
+                    x="20"
+                    y="20"
+                    width="120"
+                    height="25"
+                    rx="8"
+                    fill="#F3F4F6"
+                  />
+                  <circle cx="32" cy="32" r="3" fill="#EF4444" />
+                  <circle cx="44" cy="32" r="3" fill="#F59E0B" />
+                  <circle cx="56" cy="32" r="3" fill="#10B981" />
+                  <!-- Content Area -->
+                  <rect
+                    x="30"
+                    y="55"
+                    width="100"
+                    height="8"
+                    rx="4"
+                    fill="#7C3AED"
+                  />
+                  <rect
+                    x="30"
+                    y="70"
+                    width="70"
+                    height="6"
+                    rx="3"
+                    fill="#D1D5DB"
+                  />
+                  <rect
+                    x="30"
+                    y="82"
+                    width="85"
+                    height="6"
+                    rx="3"
+                    fill="#D1D5DB"
+                  />
+                  <rect
+                    x="30"
+                    y="94"
+                    width="50"
+                    height="6"
+                    rx="3"
+                    fill="#D1D5DB"
+                  />
+                  <!-- Buttons -->
+                  <rect
+                    x="30"
+                    y="108"
+                    width="40"
+                    height="8"
+                    rx="4"
+                    fill="#10B981"
+                  />
+                  <rect
+                    x="80"
+                    y="108"
+                    width="40"
+                    height="8"
+                    rx="4"
+                    fill="none"
+                    stroke="#7C3AED"
+                    stroke-width="1.5"
+                  />
+                  <!-- Decorative Elements -->
+                  <circle cx="145" cy="15" r="8" fill="#7C3AED" opacity="0.2" />
+                  <rect
+                    x="5"
+                    y="125"
+                    width="8"
+                    height="8"
+                    rx="2"
+                    fill="#F59E0B"
+                    opacity="0.3"
+                    transform="rotate(45 9 129)"
+                  />
+                </svg>
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">
+                  Design Orientat Spre Conversie (ROI Maxim)
+                </h3>
+                <p class="card-description">
+                  Design-ul nostru nu este doar estetic - este
+                  <span style="color: #7c3aed; font-weight: 600">strategic</span
+                  >. Creăm
+                  <span style="color: #7c3aed; font-weight: 600"
+                    >experiențe intuitive</span
+                  >
+                  care ghidează vizitatorii către
+                  <span style="color: #7c3aed; font-weight: 600"
+                    >acțiunile cheie</span
+                  >
+                  maximizând astfel
+                  <span style="color: #7c3aed; font-weight: 600"
+                    >conversiile și veniturile.</span
+                  >
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 4: SEO Optimization -->
+            <div class="why-card">
+              <div class="card-image">
+                <svg
+                  width="160"
+                  height="140"
+                  viewBox="0 0 160 140"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!-- Search Glass -->
+                  <circle
+                    cx="65"
+                    cy="60"
+                    r="30"
+                    fill="none"
+                    stroke="#7C3AED"
+                    stroke-width="4"
+                  />
+                  <circle
+                    cx="65"
+                    cy="60"
+                    r="20"
+                    fill="none"
+                    stroke="#A855F7"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="87"
+                    y1="82"
+                    x2="110"
+                    y2="105"
+                    stroke="#7C3AED"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                  />
+                  <!-- SEO Text -->
+                  <text
+                    x="65"
+                    y="67"
+                    text-anchor="middle"
+                    font-family="Arial, sans-serif"
+                    font-size="14"
+                    fill="#7C3AED"
+                    font-weight="bold"
+                  >
+                    SEO
+                  </text>
+                  <!-- Search Results Icons -->
+                  <rect
+                    x="115"
+                    y="25"
+                    width="35"
+                    height="6"
+                    rx="3"
+                    fill="#10B981"
+                  />
+                  <rect
+                    x="115"
+                    y="35"
+                    width="25"
+                    height="4"
+                    rx="2"
+                    fill="#D1D5DB"
+                  />
+                  <rect
+                    x="115"
+                    y="42"
+                    width="30"
+                    height="4"
+                    rx="2"
+                    fill="#D1D5DB"
+                  />
+
+                  <rect
+                    x="115"
+                    y="55"
+                    width="35"
+                    height="6"
+                    rx="3"
+                    fill="#F59E0B"
+                  />
+                  <rect
+                    x="115"
+                    y="65"
+                    width="28"
+                    height="4"
+                    rx="2"
+                    fill="#D1D5DB"
+                  />
+                  <rect
+                    x="115"
+                    y="72"
+                    width="32"
+                    height="4"
+                    rx="2"
+                    fill="#D1D5DB"
+                  />
+
+                  <rect
+                    x="115"
+                    y="85"
+                    width="35"
+                    height="6"
+                    rx="3"
+                    fill="#EF4444"
+                  />
+                  <rect
+                    x="115"
+                    y="95"
+                    width="26"
+                    height="4"
+                    rx="2"
+                    fill="#D1D5DB"
+                  />
+                  <rect
+                    x="115"
+                    y="102"
+                    width="31"
+                    height="4"
+                    rx="2"
+                    fill="#D1D5DB"
+                  />
+
+                  <!-- Ranking Stars -->
+                  <path
+                    d="M20 20L22 16L26 16L23 13L24 9L20 11L16 9L17 13L14 16L18 16Z"
+                    fill="#FBBF24"
+                  />
+                  <circle cx="25" cy="115" r="6" fill="#10B981" opacity="0.7" />
+                  <circle cx="40" cy="120" r="4" fill="#8B5CF6" opacity="0.7" />
+                </svg>
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">
+                  Dominație Organică (Strategie SEO Avansată)
+                </h3>
+                <p class="card-description">
+                  Implementăm
+                  <span style="color: #7c3aed; font-weight: 600"
+                    >tactici SEO moderne</span
+                  >
+                  direct în fundația codului. Astfel, site-ul dvs. nu doar se
+                  clasează bine, ci ajunge să domine
+                  <span style="color: #7c3aed; font-weight: 600"
+                    >rezultatele organice</span
+                  >
+                  din nișa dvs.,
+                  <span style="color: #7c3aed; font-weight: 600">atrăgând</span>
+                  trafic de înaltă valoare.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 5: 24/7 Support -->
+            <div class="why-card">
+              <div class="card-image">
+                <svg
+                  width="160"
+                  height="140"
+                  viewBox="0 0 160 140"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!-- Main Support Icon -->
+                  <circle
+                    cx="80"
+                    cy="60"
+                    r="35"
+                    fill="none"
+                    stroke="#7C3AED"
+                    stroke-width="3"
+                  />
+                  <circle
+                    cx="80"
+                    cy="60"
+                    r="25"
+                    fill="rgba(124, 58, 237, 0.1)"
+                  />
+                  <!-- Headset -->
+                  <path
+                    d="M65 45C65 40 70 35 80 35C90 35 95 40 95 45V75C95 80 90 85 80 85C70 85 65 80 65 75V45Z"
+                    fill="none"
+                    stroke="#7C3AED"
+                    stroke-width="2"
+                  />
+                  <!-- Microphone -->
+                  <rect
+                    x="75"
+                    y="70"
+                    width="10"
+                    height="8"
+                    rx="2"
+                    fill="#7C3AED"
+                  />
+                  <line
+                    x1="80"
+                    y1="78"
+                    x2="80"
+                    y2="85"
+                    stroke="#7C3AED"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="75"
+                    y1="85"
+                    x2="85"
+                    y2="85"
+                    stroke="#7C3AED"
+                    stroke-width="2"
+                  />
+                  <!-- Ear pieces -->
+                  <rect
+                    x="60"
+                    y="50"
+                    width="8"
+                    height="15"
+                    rx="4"
+                    fill="#7C3AED"
+                  />
+                  <rect
+                    x="92"
+                    y="50"
+                    width="8"
+                    height="15"
+                    rx="4"
+                    fill="#7C3AED"
+                  />
+                  <!-- 24/7 Badge -->
+                  <circle cx="120" cy="25" r="18" fill="#22C55E" />
+                  <text
+                    x="120"
+                    y="22"
+                    text-anchor="middle"
+                    font-family="Arial, sans-serif"
+                    font-size="8"
+                    fill="white"
+                    font-weight="bold"
+                  >
+                    24
+                  </text>
+                  <text
+                    x="120"
+                    y="31"
+                    text-anchor="middle"
+                    font-family="Arial, sans-serif"
+                    font-size="8"
+                    fill="white"
+                    font-weight="bold"
+                  >
+                    7
+                  </text>
+                  <!-- Clock indicators -->
+                  <circle cx="30" cy="30" r="3" fill="#22C55E" opacity="0.7" />
+                  <circle cx="25" cy="110" r="4" fill="#10B981" opacity="0.6" />
+                  <circle
+                    cx="130"
+                    cy="115"
+                    r="3"
+                    fill="#16A34A"
+                    opacity="0.8"
+                  />
+                </svg>
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Menținere 30 de Zile</h3>
+                <p class="card-description">
+                  Bucurați-vă de
+                  <span style="color: #7c3aed; font-weight: 600"
+                    >liniște totală</span
+                  >. Beneficiați de
+                  <span style="color: #7c3aed; font-weight: 600"
+                    >menținere dedicată 30 de zile</span
+                  >
+                  pentru a
+                  <span style="color: #7c3aed; font-weight: 600"
+                    >preveni erorile</span
+                  >
+                  înainte ca acestea să poată afecta afacerea dvs.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 6: Mobile-First Design -->
+            <div class="why-card">
+              <div class="card-image">
+                <svg
+                  width="160"
+                  height="140"
+                  viewBox="0 0 160 140"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!-- Mobile Device -->
+                  <rect
+                    x="50"
+                    y="20"
+                    width="60"
+                    height="100"
+                    rx="12"
+                    fill="white"
+                    stroke="#7C3AED"
+                    stroke-width="2"
+                  />
+                  <!-- Screen -->
+                  <rect
+                    x="55"
+                    y="30"
+                    width="50"
+                    height="75"
+                    rx="4"
+                    fill="#F8FAFC"
+                  />
+                  <!-- Home indicator -->
+                  <circle cx="80" cy="112" r="3" fill="#7C3AED" />
+                  <!-- Screen Content -->
+                  <rect
+                    x="60"
+                    y="35"
+                    width="40"
+                    height="6"
+                    rx="3"
+                    fill="#7C3AED"
+                  />
+                  <rect
+                    x="60"
+                    y="45"
+                    width="25"
+                    height="4"
+                    rx="2"
+                    fill="#D1D5DB"
+                  />
+                  <rect
+                    x="60"
+                    y="52"
+                    width="35"
+                    height="4"
+                    rx="2"
+                    fill="#D1D5DB"
+                  />
+                  <rect
+                    x="60"
+                    y="59"
+                    width="20"
+                    height="4"
+                    rx="2"
+                    fill="#D1D5DB"
+                  />
+                  <!-- Buttons -->
+                  <rect
+                    x="60"
+                    y="70"
+                    width="18"
+                    height="6"
+                    rx="3"
+                    fill="#22C55E"
+                  />
+                  <rect
+                    x="82"
+                    y="70"
+                    width="18"
+                    height="6"
+                    rx="3"
+                    fill="none"
+                    stroke="#7C3AED"
+                    stroke-width="1"
+                  />
+                  <!-- Responsive indicators -->
+                  <rect
+                    x="20"
+                    y="40"
+                    width="25"
+                    height="18"
+                    rx="3"
+                    fill="rgba(124, 58, 237, 0.1)"
+                    stroke="#7C3AED"
+                    stroke-width="1"
+                  />
+                  <text
+                    x="32"
+                    y="51"
+                    text-anchor="middle"
+                    font-family="Arial, sans-serif"
+                    font-size="8"
+                    fill="#7C3AED"
+                    font-weight="bold"
+                  >
+                    TAB
+                  </text>
+                  <!-- Desktop indicator -->
+                  <rect
+                    x="115"
+                    y="35"
+                    width="35"
+                    height="22"
+                    rx="2"
+                    fill="rgba(124, 58, 237, 0.1)"
+                    stroke="#7C3AED"
+                    stroke-width="1"
+                  />
+                  <rect x="127" y="57" width="10" height="3" fill="#7C3AED" />
+                  <text
+                    x="132"
+                    y="47"
+                    text-anchor="middle"
+                    font-family="Arial, sans-serif"
+                    font-size="6"
+                    fill="#7C3AED"
+                    font-weight="bold"
+                  >
+                    DESKTOP
+                  </text>
+                  <!-- Connecting lines -->
+                  <line
+                    x1="45"
+                    y1="49"
+                    x2="50"
+                    y2="49"
+                    stroke="#7C3AED"
+                    stroke-width="1"
+                    opacity="0.5"
+                  />
+                  <line
+                    x1="110"
+                    y1="46"
+                    x2="115"
+                    y2="46"
+                    stroke="#7C3AED"
+                    stroke-width="1"
+                    opacity="0.5"
+                  />
+                </svg>
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Experiență Perfectă pe Orice Ecran</h3>
+                <p class="card-description">
+                  Abordarea noastră
+                  <span style="color: #7c3aed; font-weight: 600"
+                    >Mobile-First</span
+                  >
+                  <span style="color: #7c3aed; font-weight: 600"
+                    >garantează</span
+                  >
+                  că site-ul dvs. arată și performează
+                  <span style="color: #7c3aed; font-weight: 600">perfect</span
+                  >—<span style="color: #7c3aed; font-weight: 600"
+                    >rapid și intuitiv</span
+                  >—pe
+                  <span style="color: #7c3aed; font-weight: 600"
+                    >toate dispozitivele</span
+                  >, maximizând implicarea în rândul întregii audiențe.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Why Choose CTA Section -->
+          <div class="why-choose-cta">
+            <!-- Animated Background Elements -->
+            <div class="why-cta-bg">
+              <div class="floating-particles">
+                <div class="particle particle-1"></div>
+                <div class="particle particle-2"></div>
+                <div class="particle particle-3"></div>
+                <div class="particle particle-4"></div>
+                <div class="particle particle-5"></div>
+                <div class="particle particle-6"></div>
+              </div>
+              <div class="animated-lines">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line line-3"></div>
+              </div>
+              <div class="pulsing-orbs">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+              </div>
+            </div>
+
+            <!-- Content with enhanced styling -->
+            <div class="why-choose-cta-content">
+              <div class="cta-icon-wrapper">
+                <div class="cta-icon">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 2L13.09 8.26L16.24 3.07L14.8 9.05L20 5.2L15.95 10.4L22 8L15.95 10.4L20 18.8L14.8 14.95L16.24 20.93L13.09 15.74L12 22L10.91 15.74L7.76 20.93L9.2 14.95L4 18.8L8.05 13.6L2 16L8.05 13.6L4 5.2L9.2 9.05L7.76 3.07L10.91 8.26L12 2Z"
+                      stroke="var(--primary-color)"
+                      stroke-width="2"
+                      fill="none"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <h3 class="why-choose-cta-title">
+                <span class="title-main">Pregătit Să Construim Următorul</span>
+                <br />
+                <span class="title-highlight">Site Care Vinde? </span>
+              </h3>
+              <p class="why-choose-cta-description">
+                Renunță la presupuneri. Hai să construim un site web de înaltă
+                performanță, creat pentru rezultate reale.
+              </p>
+
+              <div class="why-choose-cta-buttons">
+                <a
+                  href="contact.html"
+                  class="why-choose-btn why-choose-btn--primary"
+                >
+                  <div class="btn-shine"></div>
+                  <span class="btn-text">Discutați cu Noi</span>
+                  <div class="btn-bg"></div>
+                  <div class="btn-ripple"></div>
+                </a>
+                <a
+                  href="portfolio.html"
+                  class="why-choose-btn why-choose-btn--secondary"
+                >
+                  <div class="btn-shine"></div>
+                  <span class="btn-text">Descoperiți Proiectele Noastre</span>
+                  <div class="btn-bg"></div>
+                  <div class="btn-ripple"></div>
+                </a>
+              </div>
+
+              <!-- Trust indicator -->
+              <div class="cta-trust-indicator">
+                <div class="trust-stats">
+                  <div class="stat-item">
+                    <span class="stat-number">2 ani</span>
+                    <span class="stat-label">Experiență</span>
+                  </div>
+                  <div class="stat-divider"></div>
+                  <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Rată de Livrare</span>
+                  </div>
+                  <div class="stat-divider"></div>
+                  <div class="stat-item">
+                    <span class="stat-number">30 Zile</span>
+                    <span class="stat-label">Garanție</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- In-House Feeling Section -->
+    <section class="in-house-feeling">
+      <div class="container">
+        <div class="in-house-inner">
+          <div class="in-house-header">
+            <h2 class="in-house-title">
+              Colaborare Reală, <br />
+              Rezultate Reale
+            </h2>
+          </div>
+
+          <div class="in-house-grid">
+            <!-- Feature 1 -->
+            <div class="in-house-feature">
+              <h3 class="feature-title">Colaborare Directă</h3>
+              <p class="feature-description">
+                Lucrați direct cu noi — fără intermediari, fără întârzieri.
+                Ideile dvs. ajung imediat acolo unde contează: în procesul de
+                creație.
+              </p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="in-house-feature">
+              <h3 class="feature-title">Comunicare Transparentă</h3>
+              <p class="feature-description">
+                Vă ținem la curent la fiecare etapă, astfel încât să știți mereu
+                în ce stadiu se află proiectul și ce urmează.
+              </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="in-house-feature">
+              <h3 class="feature-title">Calitate & Atenție la Detalii</h3>
+              <p class="feature-description">
+                Scriem cod curat, fiabil și pregătit pentru viitor — construit
+                cu precizie, performanță și grijă pentru fiecare detaliu.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Business Benefits Section -->
+    <section class="business-benefits">
+      <div class="container">
+        <div class="benefits-inner">
+          <div class="benefits-header">
+            <span class="benefits-badge">Beneficii</span>
+            <h2 class="benefits-title">
+              Beneficiile unui Site Web de Înaltă Performanță
+            </h2>
+          </div>
+
+          <div class="benefits-cards">
+            <!-- Card 1: More Clients -->
+            <div class="benefit-card">
+              <div class="card-content">
+                <h3 class="card-title">+30% Mai Mulți Clienți</h3>
+                <p class="card-description">
+                  Site-urile profesionale cresc încrederea clienților și atrag
+                  cu 30% mai mulți clienți prin prezența online îmbunătățită.
+                </p>
+
+                <!-- Simple Client Growth Visualization -->
+                <div class="simple-visual">
+                  <div class="growth-stat">
+                    <div class="stat-info">
+                      <span class="stat-number">+30%</span>
+                      <span class="stat-label">Mai Mulți Clienți</span>
+                    </div>
+                    <div class="growth-arrow">↗</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Revenue Growth -->
+            <div class="benefit-card">
+              <div class="card-content">
+                <h3 class="card-title">Creșteți Venitul 24/7</h3>
+                <p class="card-description">
+                  Un site web lucrează non-stop, generând lead-uri și vânzări
+                  chiar și în timp ce dormiți.
+                </p>
+
+                <!-- Simple Revenue Bars -->
+                <div class="simple-visual">
+                  <div class="revenue-bars">
+                    <div class="mini-bar" style="height: 30%"></div>
+                    <div class="mini-bar" style="height: 50%"></div>
+                    <div class="mini-bar" style="height: 75%"></div>
+                    <div class="mini-bar" style="height: 100%"></div>
+                  </div>
+                  <div class="visual-label">Venit 24/7</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Trust & Credibility -->
+            <div class="benefit-card">
+              <div class="card-content">
+                <h3 class="card-title">Construiți Încredere & Credibilitate</h3>
+                <p class="card-description">
+                  Stabiliți-vă afacerea ca lider în industrie cu o prezență
+                  online profesională care construiește încrederea clienților.
+                </p>
+
+                <!-- Simple Trust Indicators -->
+                <div class="simple-visual">
+                  <div class="trust-rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-text">Rating 5.0</span>
+                  </div>
+                  <div class="trust-badges-simple">
+                    <span class="mini-badge">Verificat</span>
+                    <span class="mini-badge">Securizat</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4: SEO & Visibility -->
+            <div class="benefit-card">
+              <div class="card-content">
+                <h3 class="card-title">Apariție pe Google</h3>
+                <p class="card-description">
+                  Un site bine construit vă face vizibili pe Google și aduce
+                  afacerea în fața clienților potriviți.
+                </p>
+
+                <!-- Simple SEO Ranking -->
+                <div class="simple-visual">
+                  <div class="ranking-visual">
+                    <div class="search-result active">
+                      <span class="result-number">#1</span>
+                      <span class="result-text">Afacerea Dvs.</span>
+                    </div>
+                    <div class="search-result">
+                      <span class="result-number">#2</span>
+                      <span class="result-text">Concurența</span>
+                    </div>
+                  </div>
+                  <div class="visual-label">Clasări Google</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5: Cost Effectiveness -->
+            <div class="benefit-card">
+              <div class="card-content">
+                <h3 class="card-title">Promovare Mai Eficientă</h3>
+                <p class="card-description">
+                  Un site web înlocuiește promovarea costisitoare și aduce
+                  clienți mai relevanți.
+                </p>
+
+                <!-- Simple Cost Comparison -->
+                <div class="simple-visual">
+                  <div class="cost-comparison">
+                    <div class="cost-item traditional">
+                      <span class="cost-label">Reclame Tradiționale</span>
+                      <span class="cost-amount">$1000/lună</span>
+                    </div>
+                    <div class="vs-divider">VS</div>
+                    <div class="cost-item website">
+                      <span class="cost-label">Site Web</span>
+                      <span class="cost-amount">$500</span>
+                    </div>
+                  </div>
+                  <div class="visual-label">Economii de 90%</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6: Professional Image -->
+            <div class="benefit-card">
+              <div class="card-content">
+                <h3 class="card-title">Fiți cu un Pas Înaintea Concurenței</h3>
+                <p class="card-description">
+                  Un site web personalizat vă scoate în fața competitorilor care
+                  se bazează doar pe rețele sociale sau pe design-uri învechite.
+                </p>
+
+                <!-- Simple Competition Comparison -->
+                <div class="simple-visual">
+                  <div class="competition-bars">
+                    <div class="competitor-bar">
+                      <span class="bar-label">Dumneavoastră</span>
+                      <div
+                        class="bar-fill professional"
+                        style="width: 95%"
+                      ></div>
+                      <span class="bar-percentage">95%</span>
+                    </div>
+                    <div class="competitor-bar">
+                      <span class="bar-label">Alții</span>
+                      <div class="bar-fill basic" style="width: 40%"></div>
+                      <span class="bar-percentage">40%</span>
+                    </div>
+                  </div>
+                  <div class="visual-label">Vizibilitate Online</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Benefits CTA Section - COMMENTED OUT FOR NOW -->
+          <!--
+          <div class="benefits-cta">
+            <div class="benefits-cta-content">
+              <h3 class="benefits-cta-title">
+                Ready to Transform Your Business?
+              </h3>
+              <p class="benefits-cta-description">
+                Join hundreds of successful businesses that have boosted their
+                growth with a professional website.
+              </p>
+              <div class="benefits-cta-buttons">
+                <button class="benefits-btn benefits-btn--primary">
+                  <span class="btn-text">Get Started Today</span>
+                  <div class="btn-bg"></div>
+                </button>
+                <button class="benefits-btn benefits-btn--secondary">
+                  <span class="btn-text">View Portfolio</span>
+                  <div class="btn-bg"></div>
+                </button>
+              </div>
+            </div>
+          </div>
+          -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section class="workflow">
+      <div class="workflow-bg">
+        <div class="grid-overlay"></div>
+        <div class="glow-effects">
+          <div class="glow-orb glow-orb-1"></div>
+          <div class="glow-orb glow-orb-2"></div>
+          <div class="glow-orb glow-orb-3"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="workflow-inner">
+          <div class="workflow-header">
+            <h2 class="workflow-title">
+              <span class="title-primary">Faceți primul pas,</span>
+              <span class="title-accent">iar noi vă vom ghida</span>
+            </h2>
+          </div>
+
+          <div class="workflow-timeline">
+            <!-- Step 1 -->
+            <div class="workflow-step step-right">
+              <div class="step-circle">
+                <div class="circle-glow"></div>
+                <span class="step-number">1</span>
+              </div>
+              <div class="step-content">
+                <h3 class="step-title">Consultație Inițială</h3>
+                <p class="step-description">
+                  O consultație gratuită de 15 minute pentru a înțelege viziunea
+                  și obiectivele dvs. și pentru a ne asigura că strategia
+                  noastră este perfect aliniată cu succesul afacerii dvs.
+                </p>
+              </div>
+            </div>
+
+            <!-- Timeline connector -->
+            <div class="timeline-connector"></div>
+
+            <!-- Step 2 -->
+            <div class="workflow-step step-left">
+              <div class="step-content">
+                <h3 class="step-title">Analiză Strategică</h3>
+                <p class="step-description">
+                  Analizăm în profunzime piața, concurența și datele dvs. pentru
+                  a descoperi oportunități de creștere. Această fază creează o
+                  strategie personalizată și o hartă a călătoriei utilizatorului
+                  pentru a maximiza impactul și conversiile.
+                </p>
+              </div>
+              <div class="step-circle">
+                <div class="circle-glow"></div>
+                <span class="step-number">2</span>
+              </div>
+            </div>
+
+            <!-- Timeline connector -->
+            <div class="timeline-connector"></div>
+
+            <!-- Step 3 -->
+            <div class="workflow-step step-right">
+              <div class="step-circle">
+                <div class="circle-glow"></div>
+                <span class="step-number">3</span>
+              </div>
+              <div class="step-content">
+                <h3 class="step-title">Design Creativ & UX</h3>
+                <p class="step-description">
+                  Dăm viață viziunii dvs. cu design UI/UX intuitiv și imagini
+                  uluitoare. Focusul este pe crearea unei experiențe perfecte
+                  care este concepută strategic pentru conversie optimală și
+                  navigare fără efort.
+                </p>
+              </div>
+            </div>
+
+            <!-- Timeline connector -->
+            <div class="timeline-connector"></div>
+
+            <!-- Step 4 -->
+            <div class="workflow-step step-left">
+              <div class="step-content">
+                <h3 class="step-title">Dezvoltare de Înaltă Performanță</h3>
+                <p class="step-description">
+                  Fiecare site este construit de la zero — fără șabloane, fără
+                  compromisuri. Scriem manual fiecare linie de cod pentru
+                  performanță, stabilitate și o bază solidă ce se adaptează
+                  perfect afacerii dvs.
+                </p>
+              </div>
+              <div class="step-circle">
+                <div class="circle-glow"></div>
+                <span class="step-number">4</span>
+              </div>
+            </div>
+
+            <!-- Timeline connector -->
+            <div class="timeline-connector"></div>
+
+            <!-- Step 5 -->
+            <div class="workflow-step step-right">
+              <div class="step-circle">
+                <div class="circle-glow"></div>
+                <span class="step-number">5</span>
+              </div>
+              <div class="step-content">
+                <h3 class="step-title">Lansare & Optimizare</h3>
+                <p class="step-description">
+                  După testare riguroasă, implementăm site-ul dvs. cu un plan
+                  strategic de lansare, incluzând optimizare SEO inițială.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="faq-inner">
+          <div class="faq-header">
+            <h2 id="faq-title" class="faq-title">Întrebări Frecvente</h2>
+            <p class="faq-subtitle">
+              Găsiți răspunsuri la cele frecvente întrebări
+            </p>
+          </div>
+
+          <div class="faq-list" role="list">
+            <!-- Item 1 -->
+            <div class="faq-item" role="listitem">
+              <button
+                class="faq-question"
+                aria-expanded="false"
+                aria-controls="faq-panel-1"
+                id="faq-button-1"
+              >
+                <span class="faq-question-text"
+                  >Cât durează crearea unui site web?</span
+                >
+                <span class="faq-icon" aria-hidden="true">
+                  <span class="icon-line icon-line--h"></span>
+                  <span class="icon-line icon-line--v"></span>
+                </span>
+              </button>
+              <div
+                class="faq-answer"
+                id="faq-panel-1"
+                role="region"
+                aria-labelledby="faq-button-1"
+              >
+                <p>
+                  Un Landing Page este livrat, de obicei, în până la o
+                  săptămână. Un site complet necesită aproximativ 2-3 săptămâni,
+                  în funcție de complexitate și colaborare.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="faq-item" role="listitem">
+              <button
+                class="faq-question"
+                aria-expanded="false"
+                aria-controls="faq-panel-2"
+                id="faq-button-2"
+              >
+                <span class="faq-question-text"
+                  >Cine deține codul final și fișierele site-ului?</span
+                >
+                <span class="faq-icon" aria-hidden="true">
+                  <span class="icon-line icon-line--h"></span>
+                  <span class="icon-line icon-line--v"></span>
+                </span>
+              </button>
+              <div
+                class="faq-answer"
+                id="faq-panel-2"
+                role="region"
+                aria-labelledby="faq-button-2"
+              >
+                <p>
+                  Dumneavoastră dețineți în totalitate codul și fișierele
+                  site-ului. După finalizare, primiți toate fișierele și
+                  controlul complet asupra proiectului.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="faq-item" role="listitem">
+              <button
+                class="faq-question"
+                aria-expanded="false"
+                aria-controls="faq-panel-3"
+                id="faq-button-3"
+              >
+                <span class="faq-question-text"
+                  >Ce rezultate pot aștepta după lansare?</span
+                >
+                <span class="faq-icon" aria-hidden="true">
+                  <span class="icon-line icon-line--h"></span>
+                  <span class="icon-line icon-line--v"></span>
+                </span>
+              </button>
+              <div
+                class="faq-answer"
+                id="faq-panel-3"
+                role="region"
+                aria-labelledby="faq-button-3"
+              >
+                <p>
+                  Un site mai rapid, mai credibil și mai eficient în atragerea
+                  clienților. Toate obiectivele de performanță sunt definite
+                  împreună înainte de lansare.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="faq-item" role="listitem">
+              <button
+                class="faq-question"
+                aria-expanded="false"
+                aria-controls="faq-panel-4"
+                id="faq-button-4"
+              >
+                <span class="faq-question-text"
+                  >Ce informații aveți nevoie de la mine pentru a începe?</span
+                >
+                <span class="faq-icon" aria-hidden="true">
+                  <span class="icon-line icon-line--h"></span>
+                  <span class="icon-line icon-line--v"></span>
+                </span>
+              </button>
+              <div
+                class="faq-answer"
+                id="faq-panel-4"
+                role="region"
+                aria-labelledby="faq-button-4"
+              >
+                <p>
+                  Avem nevoie de obiectivele dvs., materialele de brand,
+                  publicul țintă și conținutul. Vă oferim o listă de verificare
+                  clară pentru a pregăti totul rapid și eficient.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="faq-item" role="listitem">
+              <button
+                class="faq-question"
+                aria-expanded="false"
+                aria-controls="faq-panel-5"
+                id="faq-button-5"
+              >
+                <span class="faq-question-text"
+                  >Oferiți garanție sau reparații de bug-uri după lansare?</span
+                >
+                <span class="faq-icon" aria-hidden="true">
+                  <span class="icon-line icon-line--h"></span>
+                  <span class="icon-line icon-line--v"></span>
+                </span>
+              </button>
+              <div
+                class="faq-answer"
+                id="faq-panel-5"
+                role="region"
+                aria-labelledby="faq-button-5"
+              >
+                <p>
+                  Da, desigur. Fiecare proiect beneficiază de o garanție
+                  post-lansare de 30 de zile. În această perioadă, orice bug sau
+                  problemă tehnică apărută în codul dezvoltat de noi este
+                  remediată gratuit. Pentru întreținere continuă, actualizări și
+                  extinderi ale funcționalităților, oferim pachete dedicate de
+                  suport.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-bg">
+        <!-- Background Circles -->
+        <div class="cta-circles">
+          <div class="cta-circle circle-1"></div>
+          <div class="cta-circle circle-2"></div>
+          <div class="cta-circle circle-3"></div>
+          <div class="cta-circle circle-4"></div>
+          <div class="cta-circle circle-5"></div>
+        </div>
+        <!-- Gradient Overlay -->
+        <div class="cta-gradient"></div>
+      </div>
+
+      <div class="container">
+        <div class="cta-inner">
+          <div class="cta-content">
+            <h2 class="cta-title">Gata Să Atrageți Mai Mulți Clienți?</h2>
+            <p class="cta-description">
+              Vom crea un site care comunică eficient cu publicul dvs., se
+              poziționează bine în Google și transformă vizitatorii în clienți
+              reali.
+            </p>
+            <div class="cta-buttons">
+              <a href="contact.html" class="cta-button cta-button--primary">
+                <span class="cta-button-text">Contactați-ne</span>
+                <div class="cta-button-bg"></div>
+              </a>
+              <a href="portfolio.html" class="cta-button cta-button--secondary">
+                <span class="cta-button-text">Vedeți Proiectele</span>
+                <div class="cta-button-bg"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-bg">
+        <!-- Wavy Background Elements -->
+        <div class="footer-waves">
+          <div class="wave wave-1"></div>
+          <div class="wave wave-2"></div>
+          <div class="wave wave-3"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="footer-inner">
+          <!-- Footer Content -->
+          <div class="footer-content">
+            <!-- Logo and Description -->
+            <div class="footer-brand">
+              <div class="footer-logo">
+                <a href="index.html">MaxStudio</a>
+              </div>
+              <p class="footer-description">
+                Creăm site-uri web excepționale care generează rezultate și
+                ajută afacerile să crească online.
+              </p>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="footer-nav">
+              <div class="footer-nav-section">
+                <h4 class="footer-nav-title">Navigare</h4>
+                <ul class="footer-nav-list">
+                  <li><a href="index.html">Acasă</a></li>
+                  <li><a href="portfolio.html">Portofoliu</a></li>
+                  <li><a href="servicii.html">Servicii</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+
+              <div class="footer-nav-section">
+                <h4 class="footer-nav-title">Servicii</h4>
+                <ul class="footer-nav-list">
+                  <li><a href="servicii.html">Dezvoltare Web</a></li>
+                  <li><a href="servicii.html">Design UI/UX</a></li>
+                  <li><a href="servicii.html">Optimizare SEO</a></li>
+                  <li><a href="servicii.html">Menținere</a></li>
+                </ul>
+              </div>
+
+              <div class="footer-nav-section">
+                <h4 class="footer-nav-title">Contact</h4>
+                <ul class="footer-nav-list">
+                  <li>
+                    <a href="mailto:hello@maxstudio.com">hello@maxstudio.com</a>
+                  </li>
+                  <li><a href="contact.html">Începeți</a></li>
+                  <li><a href="contact.html">Consultație Gratuită</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="footer-social">
+              <h4 class="footer-social-title">Urmăriți-ne</h4>
+              <div class="footer-social-links">
+                <a href="#" class="social-link" aria-label="Twitter">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                    />
+                  </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                    />
+                  </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Instagram">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer Bottom -->
+          <div class="footer-bottom">
+            <div class="footer-copyright">
+              <p>&copy; 2024 MaxStudio. Toate drepturile rezervate.</p>
+            </div>
+            <div class="footer-legal">
+              <a href="#privacy">Politica de Confidențialitate</a>
+              <a href="#terms">Termeni și Condiții</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
   </body>
 </html>

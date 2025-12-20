@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="mobile_menu.css" />
-    <title>My Works - MaxStudio Portfolio</title>
-    <link rel="icon" type="image/png" href="images/Frame 1 (2).png" />
+    <meta
+      name="description"
+      content="Explorați portofoliul MaxStudio cu proiecte de site-uri web pentru clienți din întreaga lume. Fiecare proiect spune o poveste de inovație, creativitate și design orientat spre rezultate."
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../mobile_menu.css" />
+    <title>Lucrările Noastre - Portofoliu</title>
+    <link rel="icon" type="image/png" href="../images/Frame 1 (2).png" />
+
+    <!-- Alternative de limbă pentru SEO -->
+    <link rel="alternate" hreflang="en" href="/en/portfolio.html" />
+    <link rel="alternate" hreflang="ro" href="/ro/portfolio.html" />
+    <link rel="alternate" hreflang="x-default" href="/en/portfolio.html" />
   </head>
   <body>
     <header>
@@ -20,27 +29,93 @@
           <div class="mobile-nav-actions">
             <!-- Language Switcher (Mobile) -->
             <div class="language-switcher language-switcher--mobile">
-              <button class="language-switcher-btn" id="languageSwitcherMobile" aria-label="Select Language" aria-haspopup="true" aria-expanded="false">
-                <img src="images/united-kingdom.png" alt="English" class="flag-icon" id="currentFlagMobile">
-                <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <button
+                class="language-switcher-btn"
+                id="languageSwitcherMobile"
+                aria-label="Select Language"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img
+                  src="../images/united-kingdom.png"
+                  alt="English"
+                  class="flag-icon"
+                  id="currentFlagMobile"
+                />
+                <svg
+                  class="chevron-icon"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 9L12 15L18 9"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </button>
-              
+
               <div class="language-dropdown" id="languageDropdownMobile">
-                <button class="language-option" data-lang="en" data-flag="united-kingdom">
-                  <img src="images/united-kingdom.png" alt="English" class="flag-icon">
+                <button
+                  class="language-option"
+                  data-lang="en"
+                  data-flag="united-kingdom"
+                >
+                  <img
+                    src="../images/united-kingdom.png"
+                    alt="English"
+                    class="flag-icon"
+                  />
                   <span class="language-name">ENGLISH</span>
-                  <svg class="check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <svg
+                    class="check-icon"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </button>
-                
-                <button class="language-option" data-lang="ro" data-flag="romania">
-                  <img src="images/romania.png" alt="Română" class="flag-icon">
+
+                <button
+                  class="language-option"
+                  data-lang="ro"
+                  data-flag="romania"
+                >
+                  <img
+                    src="../images/romania.png"
+                    alt="Română"
+                    class="flag-icon"
+                  />
                   <span class="language-name">ROMÂNĂ</span>
-                  <svg class="check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <svg
+                    class="check-icon"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </button>
               </div>
@@ -56,13 +131,13 @@
           <div class="nav-bar">
             <ul>
               <li>
-                <a href="index.html#about">Home</a>
+                <a href="index.html#about">Acasă</a>
               </li>
               <li>
-                <a href="portfolio.html" class="active">Portfolio</a>
+                <a href="portfolio.html" class="active">Portofoliu</a>
               </li>
               <li>
-                <a href="servicii.html">Services</a>
+                <a href="servicii.html">Servicii</a>
               </li>
             </ul>
           </div>
@@ -70,34 +145,100 @@
           <div class="contact-me">
             <!-- Language Switcher -->
             <div class="language-switcher">
-              <button class="language-switcher-btn" id="languageSwitcher" aria-label="Select Language" aria-haspopup="true" aria-expanded="false">
-                <img src="images/united-kingdom.png" alt="English" class="flag-icon" id="currentFlag">
-                <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <button
+                class="language-switcher-btn"
+                id="languageSwitcher"
+                aria-label="Select Language"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img
+                  src="../images/united-kingdom.png"
+                  alt="English"
+                  class="flag-icon"
+                  id="currentFlag"
+                />
+                <svg
+                  class="chevron-icon"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 9L12 15L18 9"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </button>
-              
+
               <div class="language-dropdown" id="languageDropdown">
-                <button class="language-option" data-lang="en" data-flag="united-kingdom">
-                  <img src="images/united-kingdom.png" alt="English" class="flag-icon">
+                <button
+                  class="language-option"
+                  data-lang="en"
+                  data-flag="united-kingdom"
+                >
+                  <img
+                    src="../images/united-kingdom.png"
+                    alt="English"
+                    class="flag-icon"
+                  />
                   <span class="language-name">ENGLISH</span>
-                  <svg class="check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <svg
+                    class="check-icon"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </button>
-                
-                <button class="language-option" data-lang="ro" data-flag="romania">
-                  <img src="images/romania.png" alt="Română" class="flag-icon">
+
+                <button
+                  class="language-option"
+                  data-lang="ro"
+                  data-flag="romania"
+                >
+                  <img
+                    src="../images/romania.png"
+                    alt="Română"
+                    class="flag-icon"
+                  />
                   <span class="language-name">ROMÂNĂ</span>
-                  <svg class="check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <svg
+                    class="check-icon"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </button>
               </div>
             </div>
 
             <a href="contact.html" class="contact-btn">
-              <span class="contact-text">Contact us</span>
+              <span class="contact-text">Contactați-ne</span>
               <span class="contact-arrow">
                 <svg
                   width="16"
@@ -126,11 +267,11 @@
       <div class="mobile-menu-content">
         <nav class="mobile-nav">
           <ul class="mobile-nav-links">
-            <li><a href="index.html">Index</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="servicii.html">Services</a></li>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="portfolio.html">Portofoliu</a></li>
+            <li><a href="servicii.html">Servicii</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="contact.html">Get Started</a></li>
+            <li><a href="contact.html">Începeți</a></li>
           </ul>
         </nav>
       </div>
@@ -148,25 +289,22 @@
         <div class="portfolio-hero-inner">
           <div class="portfolio-hero-content">
             <div class="portfolio-badge">
-              <span>Our Works</span>
+              <span>Lucrările Noastre</span>
             </div>
             <h1 class="portfolio-hero-title">
-              Crafted with
-              <span class="portfolio-hero-title--accent"
-                >Passion & Purpose</span
-              >
+              Create cu
+              <span class="portfolio-hero-title--accent">Pasiune & Scop</span>
             </h1>
             <p class="portfolio-hero-description">
-              Explore a collection of websites and digital experiences we've
-              created for clients worldwide. Each project tells a unique story
-              of innovation, creativity, and results-driven design.
+              Vedeți cum transformăm viziunea clienților în soluții digitale
+              funcționale, rapide și orientate spre rezultate măsurabile.
             </p>
           </div>
 
           <div class="portfolio-hero-visual">
             <div class="portfolio-hero-illustration">
               <img
-                src="images/illustrations/Portfolio-amico.svg"
+                src="../images/illustrations/Portfolio-amico.svg"
                 alt="Building a website illustration"
                 class="portfolio-hero-vector"
               />
@@ -196,7 +334,7 @@
               <!-- Left Column: MacBook Mockup -->
               <div class="project-main-image">
                 <img
-                  src="images/laptopmockupnobk.png"
+                  src="../images/laptopmockupnobk.png"
                   alt="Urban Haven Apartments - Laptop Mockup"
                   class="main-image"
                 />
@@ -206,9 +344,9 @@
               <div class="project-details-panel">
                 <!-- Project Meta Info -->
                 <div class="project-meta">
-                  <span class="project-type">Corporate Website</span>
+                  <span class="project-type">Website Corporativ</span>
                   <span class="meta-separator">•</span>
-                  <span class="project-timeline">4 weeks</span>
+                  <span class="project-timeline">2 săptămâini</span>
                   <span class="meta-separator">•</span>
                   <span class="project-year">2025</span>
                 </div>
@@ -216,13 +354,13 @@
                 <!-- Project Description -->
                 <div class="project-description">
                   <p>
-                    The client needed a fast, modern marketing site to
-                    effectively showcase their teambuilding services and
-                    specific event locations. Our role focused on the full
-                    development and performance optimization of the front-end,
-                    ensuring the site was mobile-responsive and featured an
-                    interactive map and dedicated photo galleries for key
-                    locations.
+                    Clientul a solicitat un website corporativ rapid și modern
+                    pentru a prezenta eficient serviciile de teambuilding și
+                    locațiile dedicate evenimentelor. Rolul nostru s-a
+                    concentrat pe dezvoltarea completă și optimizarea maximă a
+                    performanței site-ului, asigurând că site-ul este adaptabil
+                    pe orice dispozitiv și include o hartă interactivă și
+                    galerii foto dedicate pentru locațiile principale.
                   </p>
                 </div>
 
@@ -235,7 +373,10 @@
 
                 <!-- Project Result -->
                 <div class="project-result">
-                  <strong>+30% increase in lead form submissions</strong>
+                  <strong
+                    >+30% creștere a numărului de solicitări (lead-uri) trimise
+                    prin formular.</strong
+                  >
                 </div>
 
                 <!-- View Project Button -->
@@ -246,7 +387,7 @@
                     rel="noopener noreferrer"
                     class="view-project-btn"
                   >
-                    <span class="btn-text">View Project</span>
+                    <span class="btn-text">Vedeți Proiectul</span>
                     <svg
                       class="btn-arrow"
                       width="16"
@@ -271,21 +412,21 @@
             <div class="project-thumbnails">
               <div class="thumbnail-item">
                 <img
-                  src="images/teamupscreenshot2.png"
+                  src="../images/teamupscreenshot2.png"
                   alt="Urban Haven - Interior View"
                   class="thumbnail-image"
                 />
               </div>
               <div class="thumbnail-item">
                 <img
-                  src="images/teamupscreenshot3.png"
+                  src="../images/teamupscreenshot3.png"
                   alt="Urban Haven - Exterior Detail"
                   class="thumbnail-image"
                 />
               </div>
               <div class="thumbnail-item">
                 <img
-                  src="images/teamupscreenshot1.png"
+                  src="../images/teamupscreenshot1.png"
                   alt="Urban Haven - Night View"
                   class="thumbnail-image"
                 />
@@ -310,7 +451,7 @@
               <!-- Left Column: MacBook Mockup -->
               <div class="project-main-image">
                 <img
-                  src="images/rmperformancemockup.png"
+                  src="../images/rmperformancemockup.png"
                   alt="Digital Commerce Platform - Laptop Mockup"
                   class="main-image"
                 />
@@ -322,7 +463,7 @@
                 <div class="project-meta">
                   <span class="project-type">Landing Page</span>
                   <span class="meta-separator">•</span>
-                  <span class="project-timeline">2 weeks</span>
+                  <span class="project-timeline">1 săptămână</span>
                   <span class="meta-separator">•</span>
                   <span class="project-year">2025</span>
                 </div>
@@ -330,13 +471,13 @@
                 <!-- Project Description -->
                 <div class="project-description">
                   <p>
-                    The goal was to build a high-performance landing page that
-                    effectively showcased the academy's offerings, including
-                    personal and group training services and the coaching staff.
-                    Our development focused on creating dedicated sections for
-                    location and facility galleries, and implementing a smooth
-                    conversion funnel through an optimized contact form to drive
-                    enrollment inquiries.
+                    Proiectul a constat în dezvoltarea unui Landing Page pentru
+                    a prezenta eficient serviciile academiei: antrenamente
+                    individuale și de grup, antrenorii și locațiile. Obiectivul
+                    principal al dezvoltării a fost implementarea unui funnel de
+                    conversie optimizat printr-un formular de contact, special
+                    conceput pentru a genera solicitări de înscriere și a
+                    facilita procesul.
                   </p>
                 </div>
 
@@ -349,7 +490,10 @@
 
                 <!-- Project Result -->
                 <div class="project-result">
-                  <strong>+45% increase in Contact Form Submissions</strong>
+                  <strong
+                    >Creștere de +20% a ratei de conversie prin formularul de
+                    contact.</strong
+                  >
                 </div>
 
                 <!-- View Project Button -->
@@ -360,7 +504,7 @@
                     rel="noopener noreferrer"
                     class="view-project-btn"
                   >
-                    <span class="btn-text">View Project</span>
+                    <span class="btn-text">Vedeți Proiectul</span>
                     <svg
                       class="btn-arrow"
                       width="16"
@@ -385,21 +529,21 @@
             <div class="project-thumbnails">
               <div class="thumbnail-item">
                 <img
-                  src="images/rmperfscreenshot1.png"
+                  src="../images/rmperfscreenshot1.png"
                   alt="Commerce Platform - Dashboard"
                   class="thumbnail-image"
                 />
               </div>
               <div class="thumbnail-item">
                 <img
-                  src="images/rmperformscreenshot2.png"
+                  src="../images/rmperformscreenshot2.png"
                   alt="Commerce Platform - Mobile View"
                   class="thumbnail-image"
                 />
               </div>
               <div class="thumbnail-item">
                 <img
-                  src="images/rmperformscreenshot3.png"
+                  src="../images/rmperformscreenshot3.png"
                   alt="Commerce Platform - Checkout"
                   class="thumbnail-image"
                 />
@@ -413,7 +557,7 @@
 
             <div class="project-title-wrapper">
               <h2 class="project-title">
-                <span class="project-accent">Heart Gym & Wellness</span> WEBSITE
+                <span class="project-accent">Heart Gym & Wellness</span>
               </h2>
               <span class="project-year">2025</span>
             </div>
@@ -423,7 +567,7 @@
               <!-- Left Column: MacBook Mockup -->
               <div class="project-main-image">
                 <img
-                  src="images/healthgymlaptop.png"
+                  src="../images/healthgymlaptop.png"
                   alt="Creative Studio Website - Laptop Mockup"
                   class="main-image"
                 />
@@ -433,23 +577,22 @@
               <div class="project-details-panel">
                 <!-- Project Meta Info -->
                 <div class="project-meta">
-                  <span class="project-type">Corporate Website</span>
+                  <span class="project-type">Website Corporativ</span>
                   <span class="meta-separator">•</span>
-                  <span class="project-timeline">4 weeks</span>
+                  <span class="project-timeline">1 săptămână </span>
                   <span class="meta-separator">•</span>
-                  <span class="project-year">2024</span>
+                  <span class="project-year">2025</span>
                 </div>
 
                 <!-- Project Description -->
                 <div class="project-description">
                   <p>
-                    The goal was to build a high-performance, comprehensive
-                    website that could effectively showcase the gym's diverse
-                    offerings, including personal training, wellness services,
-                    and membership tiers. MaxStudio focused on developing an
-                    authoritative online presence to serve as a central,
-                    high-speed hub for detailed service information and new
-                    client acquisition.
+                    Am dezvoltat un website corporativ pentru o sală din Polonia
+                    de înaltă performanță pentru a prezenta ofertele sălii
+                    (antrenamente personale, sauna, abonamente). Obiectivul a
+                    fost crearea unui centru de informații rapid, optimizat
+                    pentru a crește achiziția de noi membri și a simplifica
+                    procesul de înscriere.
                   </p>
                 </div>
 
@@ -463,7 +606,10 @@
 
                 <!-- Project Result -->
                 <div class="project-result">
-                  <strong>15% lift in new membership conversion rates</strong>
+                  <strong
+                    >Creștere de 15% a ratei de conversie pentru achiziția de
+                    noi abonamente.</strong
+                  >
                 </div>
 
                 <!-- View Project Button -->
@@ -474,7 +620,7 @@
                     rel="noopener noreferrer"
                     class="view-project-btn"
                   >
-                    <span class="btn-text">View Project</span>
+                    <span class="btn-text">Vedeți Proiect</span>
                     <svg
                       class="btn-arrow"
                       width="16"
@@ -499,21 +645,21 @@
             <div class="project-thumbnails">
               <div class="thumbnail-item">
                 <img
-                  src="images/Healthgym1.png"
+                  src="../images/Healthgym1.png"
                   alt="Studio Website - Portfolio"
                   class="thumbnail-image"
                 />
               </div>
               <div class="thumbnail-item">
                 <img
-                  src="images/Healthgym2.png"
+                  src="../images/Healthgym2.png"
                   alt="Studio Website - About"
                   class="thumbnail-image"
                 />
               </div>
               <div class="thumbnail-item">
                 <img
-                  src="images/Healthgym3.png"
+                  src="../images/Healthgym3.png"
                   alt="Studio Website - Contact"
                   class="thumbnail-image"
                 />
@@ -531,10 +677,11 @@
           <!-- Section Header -->
           <div class="testimonials-header">
             <div class="testimonials-badge">
-              <span>What Clients Say</span>
+              <span>Ce Spun Clienții</span>
             </div>
             <h2 class="testimonials-title">
-              Trusted by <span class="title-highlight">Amazing</span> Clients
+              Colaborări de
+              <span class="title-highlight">Succes</span>
             </h2>
           </div>
 
@@ -557,22 +704,23 @@
                   />
                 </svg>
                 <p>
-                  "Working with MaxStudio was an absolute game-changer for our
-                  business. The website exceeded our expectations and has
-                  significantly improved our online presence."
+                  "Am colaborat cu echipa MaxStudio pentru a crea un Landing
+                  Page care să ne aducă mai mulți clienți. Suntem foarte
+                  mulțumiți! Nu doar că arată bine, dar funcționează perfect și
+                  ne-a depășit așteptările."
                 </p>
               </div>
               <div class="testimonial-author">
                 <div class="author-avatar">
                   <img
-                    src="images/avatars/avatarpfp.jpg"
+                    src="../images/avatars/avatarpfp.jpg"
                     alt="Vitalie Maslic"
                     class="avatar-image"
                   />
                 </div>
                 <div class="author-info">
-                  <h4 class="author-name">Vitalie Maslic</h4>
-                  <p class="author-role">CEO, TechStart Solutions</p>
+                  <h4 class="author-name">Ion Munteanu</h4>
+                  <!-- <p class="author-role">CEO, TechStart Solutions</p> -->
                 </div>
               </div>
             </div>
@@ -594,22 +742,22 @@
                   />
                 </svg>
                 <p>
-                  "Professional, creative, and delivered on time. MaxStudio
-                  transformed our outdated website into a modern, user-friendly
-                  platform that our customers love."
+                  "Am apelat la ei pentru a ne moderniza site-ul. Au reușit să-l
+                  facă simplu de utilizat și mult mai rapid. Recomand MaxStudio
+                  – sunt profesioniști care știu exact ce trebuie să facă."
                 </p>
               </div>
               <div class="testimonial-author">
                 <div class="author-avatar">
                   <img
-                    src="images/avatar-michael.jpg"
+                    src="../images/avatar-michael.jpg"
                     alt="Michael Chen"
                     class="avatar-image"
                   />
                 </div>
                 <div class="author-info">
-                  <h4 class="author-name">Michael Chen</h4>
-                  <p class="author-role">Founder, Creative Studios</p>
+                  <h4 class="author-name">Doina Rusu</h4>
+                  <!-- <p class="author-role">Founder, Creative Studios</p> -->
                 </div>
               </div>
             </div>
@@ -631,22 +779,22 @@
                   />
                 </svg>
                 <p>
-                  "Incredible attention to detail and excellent communication
-                  throughout the project. The results speak for themselves - our
-                  conversions increased by 40%."
+                  "Comunicare excelentă și rezultate rapide. Am văzut imediat
+                  efectul muncii lor: solicitările de oferte au crescut cu 20%
+                  după ce ne-au optimizat formularul. Un partener de încredere!"
                 </p>
               </div>
               <div class="testimonial-author">
                 <div class="author-avatar">
                   <img
-                    src="images/avatar-emma.jpg"
-                    alt="Emma Rodriguez"
+                    src="../images/avatar-emma.jpg"
+                    alt="Sergiu Botezatu"
                     class="avatar-image"
                   />
                 </div>
                 <div class="author-info">
-                  <h4 class="author-name">Emma Rodriguez</h4>
-                  <p class="author-role">Marketing Director, RetailPro</p>
+                  <h4 class="author-name">Sergiu Botezatu</h4>
+                  <!-- <p class="author-role">Marketing Director, RetailPro</p> -->
                 </div>
               </div>
             </div>
@@ -661,15 +809,15 @@
         <div class="contact-cta-inner">
           <div class="contact-cta-content">
             <h2 class="contact-cta-title">
-              Let's Work <span class="title-highlight">Together</span>
+              Hai Să Lucrăm <span class="title-highlight">Împreună</span>
             </h2>
             <p class="contact-cta-description">
-              We're always open to new projects and collaborations. Let's build
-              something great that makes a real impact.
+              Suntem întotdeauna deschiși la proiecte și colaborări noi. Să
+              construim ceva măreț care face un impact real.
             </p>
             <div class="contact-cta-button">
               <a href="index.html#contact" class="cta-btn cta-btn--primary">
-                <span class="btn-text">Let's Talk</span>
+                <span class="btn-text">Contactează-ne</span>
                 <svg
                   class="btn-arrow"
                   width="16"
@@ -690,8 +838,8 @@
             </div>
             <div class="contact-cta-info">
               <p class="contact-info-text">
-                <span class="contact-highlight">Quick response guaranteed</span>
-                • Free consultation available
+                <span class="contact-highlight">Răspuns rapid garantat</span>
+                • Consultație gratuită disponibilă
               </p>
             </div>
           </div>
@@ -726,7 +874,7 @@
         <div class="lightbox-content">
           <div class="lightbox-loading" id="lightboxLoading">
             <div class="loading-spinner"></div>
-            <p class="loading-text">Loading...</p>
+            <p class="loading-text">Se încarcă...</p>
           </div>
           <img src="" alt="" class="lightbox-image" id="lightboxImage" />
         </div>
@@ -754,30 +902,30 @@
                 <a href="index.html">MaxStudio</a>
               </div>
               <p class="footer-description">
-                Creating exceptional websites that drive results and help
-                businesses grow online.
+                Creăm site-uri web excepționale care generează rezultate și
+                ajută afacerile să crească online.
               </p>
             </div>
 
             <!-- Navigation Links -->
             <div class="footer-nav">
               <div class="footer-nav-section">
-                <h4 class="footer-nav-title">Navigation</h4>
+                <h4 class="footer-nav-title">Navigare</h4>
                 <ul class="footer-nav-list">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="portfolio.html">Portfolio</a></li>
-                  <li><a href="servicii.html">Services</a></li>
+                  <li><a href="index.html">Acasă</a></li>
+                  <li><a href="portfolio.html">Portofoliu</a></li>
+                  <li><a href="servicii.html">Servicii</a></li>
                   <li><a href="contact.html">Contact</a></li>
                 </ul>
               </div>
 
               <div class="footer-nav-section">
-                <h4 class="footer-nav-title">Services</h4>
+                <h4 class="footer-nav-title">Servicii</h4>
                 <ul class="footer-nav-list">
-                  <li><a href="servicii.html">Web Development</a></li>
-                  <li><a href="servicii.html">UI/UX Design</a></li>
-                  <li><a href="servicii.html">SEO Optimization</a></li>
-                  <li><a href="servicii.html">Maintenance</a></li>
+                  <li><a href="servicii.html">Dezvoltare Web</a></li>
+                  <li><a href="servicii.html">Design UI/UX</a></li>
+                  <li><a href="servicii.html">Optimizare SEO</a></li>
+                  <li><a href="servicii.html">Menținere</a></li>
                 </ul>
               </div>
 
@@ -787,15 +935,15 @@
                   <li>
                     <a href="mailto:hello@maxstudio.com">hello@maxstudio.com</a>
                   </li>
-                  <li><a href="contact.html">Get Started</a></li>
-                  <li><a href="contact.html">Free Consultation</a></li>
+                  <li><a href="contact.html">Începeți</a></li>
+                  <li><a href="contact.html">Consultație Gratuită</a></li>
                 </ul>
               </div>
             </div>
 
             <!-- Social Links -->
             <div class="footer-social">
-              <h4 class="footer-social-title">Follow Me</h4>
+              <h4 class="footer-social-title">Urmăriți-ne</h4>
               <div class="footer-social-links">
                 <a href="#" class="social-link" aria-label="Twitter">
                   <svg
@@ -840,17 +988,17 @@
           <!-- Footer Bottom -->
           <div class="footer-bottom">
             <div class="footer-copyright">
-              <p>&copy; 2024 MaxStudio. All rights reserved.</p>
+              <p>&copy; 2024 MaxStudio. Toate drepturile rezervate.</p>
             </div>
             <div class="footer-legal">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
+              <a href="#">Politica de Confidențialitate</a>
+              <a href="#">Termeni și Condiții</a>
             </div>
           </div>
         </div>
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
   </body>
 </html>

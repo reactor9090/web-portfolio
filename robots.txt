@@ -1,0 +1,33 @@
+# robots.txt for MaxStudio Portfolio
+# https://maxstudioweb.com/robots.txt
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Block backup and development files
+Disallow: /*.backup$
+Disallow: /index.html.backup
+Disallow: /notes.txt
+Disallow: /CONTEXT.md
+Disallow: /PROJECT_CONTEXT.md
+
+# Block IDE and version control directories
+Disallow: /.vscode/
+Disallow: /.git/
+
+# Allow important resources
+Allow: /images/
+Allow: /styles.css
+Allow: /mobile_menu.css
+Allow: /script.js
+
+# Allow both language versions
+Allow: /en/
+Allow: /*.html
+
+# Crawl delay (optional, adjust if needed)
+# Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://maxstudioweb.com/sitemap.xml

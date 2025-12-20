@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="mobile_menu.css" />
-    <title>Services - MaxStudio Professional Web Development</title>
-    <link rel="icon" type="image/png" href="images/Frame 1 (2).png" />
+    <meta
+      name="description"
+      content="Servicii profesionale de dezvoltare web: pagini de destinatie, site-uri corporative. Prețuri transparente și soluții personalizate pentru afacerea dvs."
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../mobile_menu.css" />
+    <title>Servicii - MaxStudio Dezvoltare Web Profesională</title>
+    <link rel="icon" type="image/png" href="../images/Frame 1 (2).png" />
+
+    <!-- Alternative de limbă pentru SEO -->
+    <link rel="alternate" hreflang="en" href="/en/servicii.html" />
+    <link rel="alternate" hreflang="ro" href="/ro/servicii.html" />
+    <link rel="alternate" hreflang="x-default" href="/en/servicii.html" />
   </head>
   <body>
     <header>
@@ -19,25 +28,91 @@
           <!-- Mobile Navigation Actions -->
           <div class="mobile-nav-actions">
             <div class="language-switcher language-switcher--mobile">
-              <button class="language-switcher-btn" id="languageSwitcherMobile" aria-label="Select Language" aria-haspopup="true" aria-expanded="false">
-                <img src="images/united-kingdom.png" alt="English" class="flag-icon" id="currentFlagMobile">
-                <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <button
+                class="language-switcher-btn"
+                id="languageSwitcherMobile"
+                aria-label="Select Language"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img
+                  src="../images/united-kingdom.png"
+                  alt="English"
+                  class="flag-icon"
+                  id="currentFlagMobile"
+                />
+                <svg
+                  class="chevron-icon"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 9L12 15L18 9"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </button>
               <div class="language-dropdown" id="languageDropdownMobile">
-                <button class="language-option" data-lang="en" data-flag="united-kingdom">
-                  <img src="images/united-kingdom.png" alt="English" class="flag-icon">
+                <button
+                  class="language-option"
+                  data-lang="en"
+                  data-flag="united-kingdom"
+                >
+                  <img
+                    src="../images/united-kingdom.png"
+                    alt="English"
+                    class="flag-icon"
+                  />
                   <span class="language-name">ENGLISH</span>
-                  <svg class="check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <svg
+                    class="check-icon"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </button>
-                <button class="language-option" data-lang="ro" data-flag="romania">
-                  <img src="images/romania.png" alt="Română" class="flag-icon">
+                <button
+                  class="language-option"
+                  data-lang="ro"
+                  data-flag="romania"
+                >
+                  <img
+                    src="../images/romania.png"
+                    alt="Română"
+                    class="flag-icon"
+                  />
                   <span class="language-name">ROMÂNĂ</span>
-                  <svg class="check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <svg
+                    class="check-icon"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </button>
               </div>
@@ -52,13 +127,13 @@
           <div class="nav-bar">
             <ul>
               <li>
-                <a href="index.html#about">Home</a>
+                <a href="index.html#about">Acasă</a>
               </li>
               <li>
-                <a href="portfolio.html">Portfolio</a>
+                <a href="portfolio.html">Portofoliu</a>
               </li>
               <li>
-                <a href="servicii.html" class="active">Services</a>
+                <a href="servicii.html" class="active">Servicii</a>
               </li>
             </ul>
           </div>
@@ -66,34 +141,100 @@
           <div class="contact-me">
             <!-- Language Switcher -->
             <div class="language-switcher">
-              <button class="language-switcher-btn" id="languageSwitcher" aria-label="Select Language" aria-haspopup="true" aria-expanded="false">
-                <img src="images/united-kingdom.png" alt="English" class="flag-icon" id="currentFlag">
-                <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <button
+                class="language-switcher-btn"
+                id="languageSwitcher"
+                aria-label="Select Language"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img
+                  src="../images/united-kingdom.png"
+                  alt="English"
+                  class="flag-icon"
+                  id="currentFlag"
+                />
+                <svg
+                  class="chevron-icon"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 9L12 15L18 9"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </button>
-              
+
               <div class="language-dropdown" id="languageDropdown">
-                <button class="language-option" data-lang="en" data-flag="united-kingdom">
-                  <img src="images/united-kingdom.png" alt="English" class="flag-icon">
+                <button
+                  class="language-option"
+                  data-lang="en"
+                  data-flag="united-kingdom"
+                >
+                  <img
+                    src="../images/united-kingdom.png"
+                    alt="English"
+                    class="flag-icon"
+                  />
                   <span class="language-name">ENGLISH</span>
-                  <svg class="check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <svg
+                    class="check-icon"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </button>
-                
-                <button class="language-option" data-lang="ro" data-flag="romania">
-                  <img src="images/romania.png" alt="Română" class="flag-icon">
+
+                <button
+                  class="language-option"
+                  data-lang="ro"
+                  data-flag="romania"
+                >
+                  <img
+                    src="../images/romania.png"
+                    alt="Română"
+                    class="flag-icon"
+                  />
                   <span class="language-name">ROMÂNĂ</span>
-                  <svg class="check-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <svg
+                    class="check-icon"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </button>
               </div>
             </div>
 
             <a href="contact.html" class="contact-btn">
-              <span class="contact-text">Contact us</span>
+              <span class="contact-text">Contactați-ne</span>
               <span class="contact-arrow">
                 <svg
                   width="16"
@@ -122,11 +263,11 @@
       <div class="mobile-menu-content">
         <nav class="mobile-nav">
           <ul class="mobile-nav-links">
-            <li><a href="index.html">Index</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="servicii.html">Services</a></li>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="portfolio.html">Portofoliu</a></li>
+            <li><a href="servicii.html">Servicii</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="contact.html">Get Started</a></li>
+            <li><a href="contact.html">Începeți</a></li>
           </ul>
         </nav>
       </div>
@@ -144,21 +285,24 @@
         <div class="services-hero-inner">
           <div class="services-hero-content">
             <div class="services-badge">
-              <span>Our Services</span>
+              <span>Serviciile Noastre</span>
             </div>
             <h1 class="services-hero-title">
-              Tailored Web Solutions
-              <span class="services-hero-title--accent">for Your Business</span>
+              Soluții Web Personalizate
+              <span class="services-hero-title--accent"
+                >pentru Afacerea Ta</span
+              >
             </h1>
             <p class="services-hero-description">
-              Transparent pricing for high-quality, custom solutions built on a
-              foundation of performance, conversion, and future-proof code. See
-              how we drive your online growth.
+              Dezvoltăm site-uri rapide, sigure și adaptate obiectivelor tale.
+              Fiecare proiect este construit cu accent pe performanță, design
+              modern și experiență de utilizare impecabilă — totul la prețuri
+              clare și fără costuri ascunse.
             </p>
           </div>
           <div class="services-hero-visual">
             <img
-              src="images/illustrations/Online document-amico.svg"
+              src="../images/illustrations/Online document-amico.svg"
               alt="Web development services illustration"
               class="services-hero-illustration"
             />
@@ -174,47 +318,50 @@
       <div class="container">
         <div class="service-inner">
           <div class="service-content">
-            <div class="service-label">SERVICES/</div>
+            <div class="service-label">SERVICII/</div>
             <div class="service-title-wrapper">
               <h2 class="service-title">Landing Page</h2>
               <div class="service-pricing">
-                <span class="pricing-text">Starting from €200</span>
+                <span class="pricing-text">Începând de la €200</span>
               </div>
             </div>
 
             <div class="service-layout">
               <div class="service-left">
                 <div class="service-characteristics">
-                  <h3 class="characteristics-title">WHAT YOU'LL GET</h3>
+                  <h3 class="characteristics-title">CE VEȚI PRIMI</h3>
                   <ul class="characteristics-list">
-                    <li class="characteristic-item">CONVERSION-FOCUSED</li>
-                    <li class="characteristic-item">FAST DELIVERY</li>
-                    <li class="characteristic-item">MOBILE OPTIMIZED</li>
-                    <li class="characteristic-item">SEO READY</li>
-                    <li class="characteristic-item">PERFORMANCE BUILT</li>
+                    <li class="characteristic-item">ORIENTAT SPRE CONVERSIE</li>
+                    <li class="characteristic-item">LIVRARE RAPIDĂ</li>
+                    <li class="characteristic-item">OPTIMIZAT MOBIL</li>
+                    <li class="characteristic-item">PREGĂTIT SEO</li>
+                    <li class="characteristic-item">PERFORMANȚĂ CONSTRUITĂ</li>
                   </ul>
                 </div>
               </div>
 
               <div class="service-right">
                 <div class="right-for-you">
-                  <h3 class="right-for-you-title">RIGHT FOR YOU IF...</h3>
+                  <h3 class="right-for-you-title">
+                    POTRIVIT PENTRU DVS. DACĂ...
+                  </h3>
                   <ul class="right-for-you-list">
                     <li>
-                      You're launching a new product or service and need to
-                      <strong>capture leads quickly</strong>.
+                      Lansați un produs sau serviciu nou și trebuie să
+                      <strong>capturați lead-uri rapid</strong>.
                     </li>
                     <li>
-                      You have a <strong>marketing campaign</strong> and need a
-                      dedicated landing page.
+                      Aveți o <strong>campanie de marketing</strong> și aveți
+                      nevoie de un landing page dedicat.
                     </li>
                     <li>
-                      You want to <strong>test market demand</strong> with a
-                      focused, single-page approach.
+                      Vreți să <strong>testați cererea pieței</strong> cu o
+                      abordare concentrată, de o singură pagină.
                     </li>
                     <li>
-                      You need a <strong>high-converting page</strong> that
-                      turns visitors into customers.
+                      Aveți nevoie de o
+                      <strong>Aveți nevoie de o pagină de impact, </strong>
+                      care inspiră acțiune și încredere.
                     </li>
                   </ul>
                 </div>
@@ -224,16 +371,27 @@
             <div class="service-overview">
               <div class="overview-content">
                 <div class="overview-text-section">
-                  <h3 class="overview-title">OVERVIEW</h3>
+                  <h3 class="overview-title">PREZENTARE GENERALĂ</h3>
                   <p class="overview-text">
-                    Perfect for businesses that need a focused, high-converting
-                    single page. Whether you're launching a product, running
-                    ads, or testing a new market, a landing page gets you
-                    results fast. We build pages that load quickly, look
-                    stunning on all devices, and are designed with one goal in
-                    mind: converting your visitors into customers. Every element
-                    is strategically placed to guide users toward your desired
-                    action.
+                    Perfect pentru afacerile care au nevoie de o pagină
+                    concentrată, clară și orientată spre rezultate. Fie că
+                    lansați un produs nou, rulați campanii publicitare sau
+                    testați o piață,
+                    <strong> o pagină de destinație bine construită </strong> vă
+                    ajută să obțineți conversii rapide și măsurabile. <br />
+                    <br />
+                    Creăm
+                    <strong>
+                      landing page-uri rapide, moderne și responsive,
+                    </strong>
+                    care arată impecabil pe orice dispozitiv și sunt proiectate
+                    cu un singur scop:
+                    <strong>
+                      să transforme vizitatorii în clienți reali.
+                    </strong>
+                    Fiecare element — de la titlu până la butonul de acțiune —
+                    este plasat strategic pentru a ghida utilizatorul exact unde
+                    trebuie.
                   </p>
 
                   <!-- Service Testimonial -->
@@ -254,13 +412,10 @@
                           />
                         </svg>
                         <p class="testimonial-text">
-                          "The landing page MaxStudio created for our product
-                          launch delivered immediate results. We saw a 45%
-                          increase in lead submissions compared to our previous
-                          page, and the mobile experience is flawless. The
-                          focused, high-performance code truly guides visitors
-                          exactly where we want them to go, which has
-                          significantly lowered our ad costs."
+                          "Experiența cu MaxStudio a fost excelentă. Echipa a
+                          înțeles perfect ce ne dorim și a livrat un landing
+                          page modern, rapid și foarte bine realizat. Recomand
+                          cu încredere!"
                         </p>
                       </div>
                       <div class="testimonial-author">
@@ -275,7 +430,7 @@
 
                 <div class="service-visual">
                   <img
-                    src="images/illustrations/landingpage.svg"
+                    src="../images/illustrations/landingpage.svg"
                     alt="Landing page illustration"
                     class="service-illustration"
                   />
@@ -284,7 +439,7 @@
 
               <div class="service-cta">
                 <a href="contact.html" class="service-cta-button">
-                  <span class="cta-text">Request a Custom Quote</span>
+                  <span class="cta-text">Solicitați Ofertă Personalizată</span>
                   <span class="cta-arrow">
                     <svg
                       width="16"
@@ -315,49 +470,52 @@
       <div class="container">
         <div class="service-inner">
           <div class="service-content">
-            <div class="service-label">SERVICES/</div>
+            <div class="service-label">SERVICII/</div>
             <div class="service-title-wrapper">
-              <h2 class="service-title">Corporate Website</h2>
+              <h2 class="service-title">Site Web Corporativ</h2>
               <div class="service-pricing">
-                <span class="pricing-text">Starting from €399</span>
+                <span class="pricing-text">Începând de la €400</span>
               </div>
             </div>
 
             <div class="service-layout">
               <div class="service-left">
                 <div class="service-characteristics">
-                  <h3 class="characteristics-title">WHAT YOU'LL GET</h3>
+                  <h3 class="characteristics-title">CE VEȚI PRIMI</h3>
                   <ul class="characteristics-list">
-                    <li class="characteristic-item">MULTI-PAGE SOLUTION</li>
-                    <li class="characteristic-item">BRAND FOCUSED</li>
-                    <li class="characteristic-item">CONTENT MANAGEMENT</li>
-                    <li class="characteristic-item">SCALABLE ARCHITECTURE</li>
-                    <li class="characteristic-item">PROFESSIONAL DESIGN</li>
+                    <li class="characteristic-item">SOLUȚIE MULTI-PAGINĂ</li>
+                    <li class="characteristic-item">CONCENTRAT PE BRAND</li>
+                    <li class="characteristic-item">GESTIONARE CONȚINUT</li>
+                    <li class="characteristic-item">ARHITECTURĂ SCALABILĂ</li>
+                    <li class="characteristic-item">DESIGN PROFESIONAL</li>
                   </ul>
                 </div>
               </div>
 
               <div class="service-right">
                 <div class="right-for-you">
-                  <h3 class="right-for-you-title">RIGHT FOR YOU IF...</h3>
+                  <h3 class="right-for-you-title">
+                    POTRIVIT PENTRU DVS. DACĂ...
+                  </h3>
                   <ul class="right-for-you-list">
                     <li>
-                      You need a <strong>complete online presence</strong> with
-                      multiple pages and sections.
+                      Aveți nevoie de o
+                      <strong>prezență online completă</strong> cu mai multe
+                      pagini și secțiuni.
                     </li>
                     <li>
-                      You want to <strong>establish credibility</strong> and
-                      showcase your full range of services.
+                      Vreți să <strong>stabiliți credibilitate</strong> și să
+                      prezentați întreaga gamă de servicii.
                     </li>
                     <li>
-                      You need
-                      <strong>content management capabilities</strong> to update
-                      your site regularly.
+                      Aveți nevoie de
+                      <strong>capacități de gestionare a conținutului</strong>
+                      pentru a actualiza site-ul în mod regulat.
                     </li>
                     <li>
-                      You're looking for a
-                      <strong>long-term digital foundation</strong> that grows
-                      with your business.
+                      Căutați o
+                      <strong>fundație digitală pe termen lung</strong> care
+                      crește odată cu afacerea dumneavoastră.
                     </li>
                   </ul>
                 </div>
@@ -367,16 +525,18 @@
             <div class="service-overview">
               <div class="overview-content">
                 <div class="overview-text-section">
-                  <h3 class="overview-title">OVERVIEW</h3>
+                  <h3 class="overview-title">PREZENTARE GENERALĂ</h3>
                   <p class="overview-text">
-                    A comprehensive digital solution for established businesses
-                    ready to make their mark online. We create multi-page
-                    websites that tell your complete story - from your About
-                    page to detailed service descriptions, portfolio showcases,
-                    and contact information. Built with growth in mind, these
-                    sites include content management systems, are optimized for
-                    search engines, and provide the professional foundation your
-                    business deserves.
+                    O soluție web completă, perfectă pentru afacerile care vor o
+                    prezență online solidă și de încredere. Realizăm websiteuri
+                    cu mai multe pagini care spun povestea brandului
+                    dumneavoastră — de la pagina „Despre noi”, până la
+                    prezentarea serviciilor, portofoliului și informațiilor de
+                    contact.
+                    <br />
+                    <br />
+                    Fiecare proiect este construit cu grijă pentru performanță,
+                    ușurință în administrare și creștere pe termen lung.
                   </p>
 
                   <!-- Service Testimonial -->
@@ -397,13 +557,12 @@
                           />
                         </svg>
                         <p class="testimonial-text">
-                          "Our new corporate website transformed how clients
-                          perceive our business. The intuitive navigation and
-                          high-performance front-end led to a 65% increase in
-                          qualified inquiries within the first quarter. The
-                          custom architecture makes updates effortless, and our
-                          SEO foundation has improved significantly, cementing
-                          our brand authority online."
+                          "Noul website realizat de MaxStudio a schimbat complet
+                          modul în care clienții ne percep. Navigarea este clară
+                          și intuitivă, iar performanța tehnică este excelentă.
+                          Vizibilitatea noastră online s-a îmbunătățit
+                          considerabil. O colaborare de încredere, cu rezultate
+                          vizibile."
                         </p>
                       </div>
                       <div class="testimonial-author">
@@ -420,7 +579,7 @@
 
                 <div class="service-visual">
                   <img
-                    src="images/illustrations/corporatewebsite.svg"
+                    src="../images/illustrations/corporatewebsite.svg"
                     alt="Business website illustration"
                     class="service-illustration"
                   />
@@ -429,7 +588,7 @@
 
               <div class="service-cta">
                 <a href="contact.html" class="service-cta-button">
-                  <span class="cta-text">Request a Custom Quote</span>
+                  <span class="cta-text">Solicitați Ofertă Personalizată</span>
                   <span class="cta-arrow">
                     <svg
                       width="16"
@@ -561,7 +720,7 @@
 
                 <div class="service-visual">
                   <img
-                    src="images/undraw_freelancer_vibs.svg"
+                    src="../images/undraw_freelancer_vibs.svg"
                     alt="E-commerce illustration"
                     class="service-illustration"
                   />
@@ -602,10 +761,10 @@
         <div class="faq-inner">
           <div class="faq-header">
             <h2 id="faq-title-services" class="faq-title">
-              Frequently Asked Questions
+              Întrebări Frecvente
             </h2>
             <p class="faq-subtitle">
-              Everything you need to know about our services and pricing
+              Tot ce trebuie să știți despre serviciile și prețurile noastre
             </p>
           </div>
 
@@ -619,7 +778,7 @@
                 id="faq-button-services-1"
               >
                 <span class="faq-question-text"
-                  >How do you determine the final cost of a project?</span
+                  >Cum se stabilește costul unui proiect?</span
                 >
                 <span class="faq-icon" aria-hidden="true">
                   <span class="icon-line icon-line--h"></span>
@@ -633,13 +792,13 @@
                 aria-labelledby="faq-button-services-1"
               >
                 <p>
-                  The pricing process is fully transparent and based on the
-                  specific scope and complexity of your project, not a fixed
-                  package. The "Starting From" price listed serves as a minimum
-                  baseline investment. After our initial consultation, we
-                  provide a detailed, fixed-price quote based on the required
-                  features, custom functionality, and development time. There
-                  are no hidden fees.
+                  Prețul fiecărui proiect depinde de complexitate și de
+                  funcționalitățile dorite, nu există pachete fixe. Valoarea
+                  <br />
+                  „Începând de la” reprezintă suma minimă pentru un proiect
+                  standard. După consultarea inițială, vă oferim o ofertă clară,
+                  cu preț fix, bazată pe cerințele specifice. Fără taxe ascunse
+                  sau surprize.
                 </p>
               </div>
             </div>
@@ -653,7 +812,8 @@
                 id="faq-button-services-2"
               >
                 <span class="faq-question-text"
-                  >Can the project be scaled into a larger website later?</span
+                  >Poate fi proiectul extins ulterior într-un site mai
+                  mare?</span
                 >
                 <span class="faq-icon" aria-hidden="true">
                   <span class="icon-line icon-line--h"></span>
@@ -667,12 +827,11 @@
                 aria-labelledby="faq-button-services-2"
               >
                 <p>
-                  Absolutely. Since we build all projects on a modern, custom,
-                  non-proprietary architecture (HTML, CSS, JavaScript), the code
-                  base is inherently clean, flexible, and fully scalable. This
-                  means you can easily expand a Landing Page into a multi-page
-                  Corporate Website, integrate new features, or onboard new
-                  developers without being locked into a rigid platform.
+                  Da! Toate proiectele noastre sunt construite de la zero, fără
+                  șabloane, pe o bază curată și flexibilă. Acest lucru înseamnă
+                  că puteți extinde oricând o pagină de destinație într-un site
+                  multi-pagină, adăuga funcționalități noi sau colabora cu alți
+                  dezvoltatori fără limite tehnologice.
                 </p>
               </div>
             </div>
@@ -686,7 +845,7 @@
                 id="faq-button-services-3"
               >
                 <span class="faq-question-text"
-                  >Do you offer payment plans or installments?</span
+                  >Când trebuie să plătesc pentru proiect?</span
                 >
                 <span class="faq-icon" aria-hidden="true">
                   <span class="icon-line icon-line--h"></span>
@@ -700,12 +859,10 @@
                 aria-labelledby="faq-button-services-3"
               >
                 <p>
-                  Yes, for larger projects. To help manage your budget, we
-                  structure payments based on clear project milestones.
-                  Typically, this involves a deposit to begin the work, and
-                  subsequent installments are paid upon the successful
-                  completion and sign-off of key stages (like Design
-                  Implementation approval and Development completion).
+                  Lucrăm cu un avans de 50% la semnarea contractului, iar restul
+                  se achită la finalizarea proiectului. Ne întâlnim fizic pentru
+                  a semna contractul, astfel încât totul să fie clar și sigur
+                  pentru ambele părți.
                 </p>
               </div>
             </div>
@@ -719,9 +876,8 @@
                 id="faq-button-services-4"
               >
                 <span class="faq-question-text"
-                  >What kind of ongoing maintenance or support do you
-                  offer?</span
-                >
+                  >Ce tip de întreținere sau suport continuu oferiți?
+                </span>
                 <span class="faq-icon" aria-hidden="true">
                   <span class="icon-line icon-line--h"></span>
                   <span class="icon-line icon-line--v"></span>
@@ -734,12 +890,12 @@
                 aria-labelledby="faq-button-services-4"
               >
                 <p>
-                  All projects come with a 30-Day Launch Warranty for bug fixes
-                  and technical issues following the final launch. After this
-                  period, you own the code 100%. For clients who require
-                  continued peace of mind, we offer flexible, affordable monthly
-                  retainer plans for proactive monitoring, security updates, and
-                  continued feature development.
+                  Toate proiectele includ o garanție de 30 de zile după lansare,
+                  pentru corectarea eventualelor bug-uri sau probleme tehnice.
+                  După această perioadă, codul vă aparține 100%. Pentru clienții
+                  care doresc suport continuu, oferim planuri lunare flexibile
+                  pentru monitorizare, actualizări de securitate și dezvoltarea
+                  funcționalităților existente.
                 </p>
               </div>
             </div>
@@ -766,19 +922,18 @@
       <div class="container">
         <div class="cta-inner">
           <div class="cta-content">
-            <h2 class="cta-title">Ready to Transform Your Business?</h2>
+            <h2 class="cta-title">Sunteți Gata să Vă Transformați Afacerea?</h2>
             <p class="cta-description">
-              Choose the perfect service package for your needs and get a
-              professional website that drives results. From landing pages to
-              full e-commerce stores, we'll bring your vision to life.
+              Contactați-ne pentru a obține un site profesional care generează
+              rezultate.
             </p>
             <div class="cta-buttons">
               <a href="contact.html" class="cta-button cta-button--primary">
-                <span class="cta-button-text">Get Your Free Quote</span>
+                <span class="cta-button-text">Obțineți Oferta Gratuită</span>
                 <div class="cta-button-bg"></div>
               </a>
               <a href="portfolio.html" class="cta-button cta-button--secondary">
-                <span class="cta-button-text">View Our Work</span>
+                <span class="cta-button-text">Vedeți Lucrările Noastre</span>
                 <div class="cta-button-bg"></div>
               </a>
             </div>
@@ -832,7 +987,7 @@
                 </div>
                 
                 <div class="service-visual">
-                  <img src="images/undraw_questions_g2px.svg" alt="Web application illustration" class="service-illustration" />
+                  <img src="../images/undraw_questions_g2px.svg" alt="Web application illustration" class="service-illustration" />
                 </div>
               </div>
               
@@ -873,36 +1028,34 @@
                 <a href="index.html">MaxStudio</a>
               </div>
               <p class="footer-description">
-                Creating exceptional websites that drive results and help
-                businesses grow online.
+                Creăm site-uri web excepționale care aduc rezultate și ajută
+                afacerile să crească online.
               </p>
             </div>
 
             <!-- Navigation Links -->
             <div class="footer-nav">
               <div class="footer-nav-section">
-                <h4 class="footer-nav-title">Navigation</h4>
+                <h4 class="footer-nav-title">Navigare</h4>
                 <ul class="footer-nav-list">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="portfolio.html">Portfolio</a></li>
-                  <li><a href="servicii.html">Services</a></li>
+                  <li><a href="index.html">Acasă</a></li>
+                  <li><a href="portfolio.html">Portofoliu</a></li>
+                  <li><a href="servicii.html">Servicii</a></li>
                   <li><a href="contact.html">Contact</a></li>
                 </ul>
               </div>
 
               <div class="footer-nav-section">
-                <h4 class="footer-nav-title">Services</h4>
+                <h4 class="footer-nav-title">Servicii</h4>
                 <ul class="footer-nav-list">
                   <li>
-                    <a href="servicii.html#web-development">Web Development</a>
+                    <a href="servicii.html#web-development">Dezvoltare Web</a>
                   </li>
-                  <li><a href="servicii.html#ui-ux-design">UI/UX Design</a></li>
+                  <li><a href="servicii.html#ui-ux-design">Design UI/UX</a></li>
                   <li>
-                    <a href="servicii.html#seo-optimization"
-                      >SEO Optimization</a
-                    >
+                    <a href="servicii.html#seo-optimization">Optimizare SEO</a>
                   </li>
-                  <li><a href="servicii.html#maintenance">Maintenance</a></li>
+                  <li><a href="servicii.html#maintenance">Întreținere</a></li>
                 </ul>
               </div>
 
@@ -912,15 +1065,15 @@
                   <li>
                     <a href="mailto:hello@maxstudio.com">hello@maxstudio.com</a>
                   </li>
-                  <li><a href="contact.html">Get Started</a></li>
-                  <li><a href="contact.html">Free Consultation</a></li>
+                  <li><a href="contact.html">Începeți</a></li>
+                  <li><a href="contact.html">Consultanță Gratuită</a></li>
                 </ul>
               </div>
             </div>
 
             <!-- Social Links -->
             <div class="footer-social">
-              <h4 class="footer-social-title">Follow Me</h4>
+              <h4 class="footer-social-title">Urmărește-mă</h4>
               <div class="footer-social-links">
                 <a href="#" class="social-link" aria-label="Twitter">
                   <svg
@@ -965,17 +1118,17 @@
           <!-- Footer Bottom -->
           <div class="footer-bottom">
             <div class="footer-copyright">
-              <p>&copy; 2024 MaxStudio. All rights reserved.</p>
+              <p>&copy; 2024 MaxStudio. Toate drepturile rezervate.</p>
             </div>
             <div class="footer-legal">
-              <a href="#privacy">Privacy Policy</a>
-              <a href="#terms">Terms of Service</a>
+              <a href="#privacy">Politica de Confidențialitate</a>
+              <a href="#terms">Termeni și Condiții</a>
             </div>
           </div>
         </div>
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
   </body>
 </html>

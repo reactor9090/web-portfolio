@@ -110,13 +110,11 @@ function initLanguageSwitcher() {
   // Detect current language from URL
   const currentPath = window.location.pathname;
   const pathParts = currentPath.split('/').filter(part => part);
-  let currentLanguage = 'en'; // default
+  let currentLanguage = 'ro'; // default is now Romanian (root)
   
-  // Check if URL contains /en/ or /ro/
+  // Check if URL contains /en/ - if so, it's English; otherwise Romanian
   if (pathParts.includes('en')) {
     currentLanguage = 'en';
-  } else if (pathParts.includes('ro')) {
-    currentLanguage = 'ro';
   }
   
   // Save detected language to localStorage
@@ -218,12 +216,17 @@ function initLanguageSwitcher() {
   }
   
   function updateCurrentFlag(lang) {
+    // Detect if we're in root (Romanian) or /en/ directory
+    const currentPath = window.location.pathname;
+    const isInEnFolder = currentPath.includes('/en/');
+    const imagePrefix = isInEnFolder ? '../images/' : 'images/';
+    
     const flagMap = {
-      'en': { src: '../images/united-kingdom.png', alt: 'English' },
-      'ro': { src: '../images/romania.png', alt: 'Română' }
+      'en': { src: `${imagePrefix}united-kingdom.png`, alt: 'English' },
+      'ro': { src: `${imagePrefix}romania.png`, alt: 'Română' }
     };
     
-    const flagData = flagMap[lang] || flagMap['en'];
+    const flagData = flagMap[lang] || flagMap['ro'];
     
     if (currentFlag) {
       currentFlag.src = flagData.src;
@@ -258,8 +261,13 @@ function switchLanguagePath(currentPath, targetLang) {
     }
   }
   
-  // Construct new path: /{lang}/{page}
-  return `/${targetLang}/${pageFilename}`;
+  // Construct new path based on target language
+  // Romanian is in root, English is in /en/
+  if (targetLang === 'ro') {
+    return `/${pageFilename}`;
+  } else {
+    return `/en/${pageFilename}`;
+  }
 }
 
 // Initialize language switcher when DOM is ready
