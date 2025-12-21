@@ -45,7 +45,7 @@ body {
 
 ul,
 li {
-  list-style-type: none;
+  /* list-style-type: none; */
   margin: 0;
   padding: 0;
 }
@@ -11874,6 +11874,14 @@ header.navbar-visible {
 .article-content ol {
   margin: 0 0 24px 0;
   padding-left: 32px;
+}
+
+.article-content ul {
+  list-style-type: disc;
+}
+
+.article-content ol {
+  list-style-type: decimal;
 }
 
 .article-content li {
