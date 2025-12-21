@@ -219,7 +219,8 @@ function initLanguageSwitcher() {
     // Detect if we're in root (Romanian) or /en/ directory
     const currentPath = window.location.pathname;
     const isInEnFolder = currentPath.includes('/en/');
-    const imagePrefix = isInEnFolder ? '../images/' : 'images/';
+    const isInBlogFolder = currentPath.includes('/blog/');
+    const imagePrefix = (isInEnFolder || isInBlogFolder) ? '../images/' : 'images/';
     
     const flagMap = {
       'en': { src: `${imagePrefix}united-kingdom.png`, alt: 'English' },
