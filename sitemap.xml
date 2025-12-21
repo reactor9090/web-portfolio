@@ -90,4 +90,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/contact.html"/>
   </url>
   
+  <!-- Romanian Blog Index -->
+  <url>
+    <loc>https://maxstudioweb.com/blog/index.html</loc>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Blog Article: Cât costă un site web în Moldova -->
+  <url>
+    <loc>https://maxstudioweb.com/blog/cat-costa-un-site-web-moldova.html</loc>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
 </urlset>
