@@ -1119,3 +1119,50 @@ if (document.readyState === 'loading') {
   new NavbarScrollReveal();
 }
 
+
+
+// Stats Counter Animation
+function animateCounter(element) {
+  const target = parseInt(element.getAttribute('data-target'));
+  const duration = 2000; // 2 seconds
+  const increment = target / (duration / 16); // 60fps
+  let current = 0;
+  
+  // Determine suffix based on the stat
+  const statLabel = element.closest('.stat-card').querySelector('.stat-proof-label').textContent.toLowerCase();
+  let suffix = '+';
+  
+  if (statLabel.includes('timp') || statLabel.includes('satisfac')) {
+    suffix = '%';
+  }
+  
+  const timer = setInterval(() => {
+    current += increment;
+    if (current >= target) {
+      element.textContent = target + suffix;
+      clearInterval(timer);
+    } else {
+      element.textContent = Math.floor(current) + suffix;
+    }
+  }, 16);
+}
+
+// Intersection Observer for Stats
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+      entry.target.classList.add('counted');
+      animateCounter(entry.target);
+    }
+  });
+}, {
+  threshold: 0.5
+});
+
+// Observe all stat numbers
+document.addEventListener('DOMContentLoaded', () => {
+  const statNumbers = document.querySelectorAll('.stat-proof-number');
+  statNumbers.forEach(stat => {
+    statsObserver.observe(stat);
+  });
+});

@@ -7447,6 +7447,139 @@ header.navbar-visible {
 
 /* END HERO */
 
+/* START STATS PROOF SECTION */
+.stats-proof {
+  background: var(--background-color);
+  padding: 60px 0;
+  position: relative;
+}
+
+.stats-proof-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 0 20px;
+}
+
+.stat-card {
+  background: transparent;
+  border: 5px solid var(--primary-color);
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(124, 58, 237, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  border-color: #9333ea;
+  box-shadow: 0 12px 32px rgba(124, 58, 237, 0.25);
+}
+
+.stat-card:hover::before {
+  opacity: 1;
+}
+
+.stat-proof-number {
+  font-family: var(--headings-text);
+  font-size: clamp(3rem, 10vw, 4.5rem);
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-proof-label {
+  font-family: var(--headings-text);
+  font-size: clamp(1.3rem, 4vw, 1.6rem);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-proof-description {
+  font-family: var(--body-text);
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  color: var(--blacktext-color);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .stat-proof-number {
+    font-size: 2.9rem;
+  }
+  
+  .stat-proof-label {
+    font-size: 1.3rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+  
+  .stat-card {
+    padding: 40px 28px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .stats-proof {
+    padding: 80px 0;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  
+  .stat-card {
+    padding: 48px 32px;
+  }
+  
+  .stat-proof-number {
+    font-size: 4.5rem;
+  }
+  
+  .stat-proof-label {
+    font-size: 1.6rem;
+  }
+  
+  .stat-proof-description {
+    font-size: 1rem;
+  }
+}
+
+/* END STATS PROOF SECTION */
+
 /* START RECENT PROJECTS SHOWCASE SECTION */
 .recent-projects-showcase {
   background: var(--background-color);
