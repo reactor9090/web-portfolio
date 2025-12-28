@@ -4,95 +4,103 @@
   
   <!-- Romanian Homepage (Default) -->
   <url>
-    <loc>https://maxstudioweb.com/index.html</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://maxstudioweb.com/</loc>
+    <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ro-MD" href="https://maxstudioweb.com/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/"/>
   </url>
   
   <!-- English Homepage -->
   <url>
-    <loc>https://maxstudioweb.com/en/index.html</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://maxstudioweb.com/en/</loc>
+    <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/index.html"/>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ro-MD" href="https://maxstudioweb.com/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/"/>
   </url>
   
   <!-- Romanian Portfolio -->
   <url>
-    <loc>https://maxstudioweb.com/portfolio.html</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://maxstudioweb.com/portfolio</loc>
+    <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/portfolio.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/portfolio.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="ro-MD" href="https://maxstudioweb.com/portfolio"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/portfolio"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/portfolio"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/portfolio"/>
   </url>
   
   <!-- English Portfolio -->
   <url>
-    <loc>https://maxstudioweb.com/en/portfolio.html</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://maxstudioweb.com/en/portfolio</loc>
+    <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/portfolio.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/portfolio.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/portfolio.html"/>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ro-MD" href="https://maxstudioweb.com/portfolio"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/portfolio"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/portfolio"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/portfolio"/>
   </url>
   
   <!-- Romanian Services -->
   <url>
-    <loc>https://maxstudioweb.com/servicii.html</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://maxstudioweb.com/servicii</loc>
+    <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/servicii.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/servicii.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/servicii.html"/>
+    <xhtml:link rel="alternate" hreflang="ro-MD" href="https://maxstudioweb.com/servicii"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/servicii"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/servicii"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/servicii"/>
   </url>
   
   <!-- English Services -->
   <url>
-    <loc>https://maxstudioweb.com/en/servicii.html</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://maxstudioweb.com/en/servicii</loc>
+    <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/servicii.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/servicii.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/servicii.html"/>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ro-MD" href="https://maxstudioweb.com/servicii"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/servicii"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/servicii"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/servicii"/>
   </url>
   
   <!-- Romanian Contact -->
   <url>
-    <loc>https://maxstudioweb.com/contact.html</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://maxstudioweb.com/contact</loc>
+    <lastmod>2025-12-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ro-MD" href="https://maxstudioweb.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/contact"/>
   </url>
   
   <!-- English Contact -->
   <url>
-    <loc>https://maxstudioweb.com/en/contact.html</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://maxstudioweb.com/en/contact</loc>
+    <lastmod>2025-12-28</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/contact.html"/>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ro-MD" href="https://maxstudioweb.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://maxstudioweb.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maxstudioweb.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://maxstudioweb.com/contact"/>
   </url>
   
   <!-- Romanian Blog Index -->
   <url>
-    <loc>https://maxstudioweb.com/blog/index.html</loc>
+    <loc>https://maxstudioweb.com/blog/</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -100,7 +108,7 @@
   
   <!-- Blog Article: Cât costă un site web în Moldova -->
   <url>
-    <loc>https://maxstudioweb.com/blog/cat-costa-un-site-web-moldova.html</loc>
+    <loc>https://maxstudioweb.com/blog/cat-costa-un-site-web-moldova</loc>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
