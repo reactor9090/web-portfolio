@@ -16,6 +16,41 @@
       "source": "/blog/index.html",
       "destination": "/blog",
       "permanent": true
+    },
+    {
+      "source": "/portfolio.html",
+      "destination": "/portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/servicii.html",
+      "destination": "/servicii",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/en/portfolio.html",
+      "destination": "/en/portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/en/servicii.html",
+      "destination": "/en/servicii",
+      "permanent": true
+    },
+    {
+      "source": "/en/contact.html",
+      "destination": "/en/contact",
+      "permanent": true
+    },
+    {
+      "source": "/blog/cat-costa-un-site-web-moldova.html",
+      "destination": "/blog/cat-costa-un-site-web-moldova",
+      "permanent": true
     }
   ],
   "headers": [
